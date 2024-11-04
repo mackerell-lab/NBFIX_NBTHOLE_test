@@ -1,0 +1,156 @@
+###################################
+# CHARMM Version c44b2-serial
+###################################
+  
+>> switch COMB 
+ VDW  2.15189824
+ ELE  -123.075679
+ 
+>> ljpme COMB 
+ VDW  2.15189824
+ ELE  -123.07568
+ 
+>> switch NBFIX 
+ VDW  58.5793917
+ ELE  -123.075679
+ 
+>> ljpme NBFIX 
+ VDW  58.5793917
+ ELE  -123.07568
+ 
+>> switch NBTHOLE 
+ VDW  2.15189824
+ ELE  NaN
+ 
+>> ljpme NBTHOLE 
+ VDW  2.15189824
+ ELE  -123.07568
+ 
+>> switch NBFIX_NBTHOLE 
+ VDW  58.5793917
+ ELE  NaN
+ 
+>> ljpme NBFIX_NBTHOLE 
+ VDW  58.5793917
+ ELE  -123.07568
+ 
+###################################
+# CHARMM Version charmm-c48a2-serial
+###################################
+  
+>> switch COMB 
+ VDW  2.15189824
+ ELE  -123.075679
+ 
+>> ljpme COMB 
+ 
+>> switch NBFIX 
+ VDW  58.5793917
+ ELE  -123.075679
+ 
+>> ljpme NBFIX 
+ 
+>> switch NBTHOLE 
+ VDW  2.15189824
+ ELE  -106.775973
+ 
+>> ljpme NBTHOLE 
+ 
+>> switch NBFIX_NBTHOLE 
+ VDW  58.5793917
+ ELE  -106.775973
+ 
+>> ljpme NBFIX_NBTHOLE 
+ 
+###################################
+# CHARMM Version charmm-c48b2-serial-ljpme
+###################################
+  
+>> switch COMB 
+ VDW  2.15189824
+ ELE  -123.075679
+ 
+>> ljpme COMB 
+ VDW  2.23185338
+ ELE  -123.07568
+ 
+>> switch NBFIX 
+ VDW  58.5793917
+ ELE  -123.075679
+ 
+>> ljpme NBFIX 
+ VDW  58.6593468
+ ELE  -123.07568
+ 
+>> switch NBTHOLE 
+ VDW  2.15189824
+ ELE  -106.775973
+ 
+>> ljpme NBTHOLE 
+ VDW  2.23185338
+ ELE  -123.07568
+ 
+>> switch NBFIX_NBTHOLE 
+ VDW  58.5793917
+ ELE  -106.775973
+ 
+>> ljpme NBFIX_NBTHOLE 
+ VDW  58.6593468
+ ELE  -123.07568
+ 
+###################################
+# CHARMM Version charmm-c48b2-serial-ljpme-avx
+###################################
+  
+>> switch COMB 
+ VDW  2.15189824
+ ELE  -123.075679
+ 
+>> ljpme COMB 
+ 
+>> switch NBFIX 
+ VDW  58.5793917
+ ELE  -123.075679
+ 
+>> ljpme NBFIX 
+ 
+>> switch NBTHOLE 
+ VDW  2.15189824
+ ELE  -106.775973
+ 
+>> ljpme NBTHOLE 
+ 
+>> switch NBFIX_NBTHOLE 
+ VDW  58.5793917
+ ELE  -106.775973
+ 
+>> ljpme NBFIX_NBTHOLE 
+ 
+###################################
+# CHARMM Version charmm-c48b2-serial-ljpme-avx2
+###################################
+  
+>> switch COMB 
+ VDW  2.15189824
+ ELE  -123.075679
+ 
+>> ljpme COMB 
+ 
+>> switch NBFIX 
+ VDW  58.5793917
+ ELE  -123.075679
+ 
+>> ljpme NBFIX 
+ 
+>> switch NBTHOLE 
+ VDW  2.15189824
+ ELE  -106.775973
+ 
+>> ljpme NBTHOLE 
+ 
+>> switch NBFIX_NBTHOLE 
+ VDW  58.5793917
+ ELE  -106.775973
+ 
+>> ljpme NBFIX_NBTHOLE 
+ 

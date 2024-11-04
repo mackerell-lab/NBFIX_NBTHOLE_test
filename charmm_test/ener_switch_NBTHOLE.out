@@ -1,11 +1,11 @@
 1
                  Chemistry at HARvard Macromolecular Mechanics
-           (CHARMM) - Developmental Version 48b2   February 15, 2024            
-                            Git commit ID 0bbe2e2f5                             
-       Copyright(c) 1984-2023  President and Fellows of Harvard College
+           (CHARMM) - Developmental Version 44b2   February 15, 2020            
+                                 Git commit ID                                  
+       Copyright(c) 1984-2014  President and Fellows of Harvard College
                               All Rights Reserved
          Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
-                 Created on 11/4/24 at 13:38:16 by user: ynan        
+                 Created on 11/4/24 at 12:18:20 by user: ynan        
 
             Maximum number of ATOMS:    360720, and RESidues:      120240
  RDTITL> * ION INTERACTION ENERGY SURFACE
@@ -46,6 +46,9 @@
 
  DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
  Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+ **** Warning ****  The following extraneous characters
+ were found while command processing in RTF reader
+ NOANG NODIH
   
  CHARMM>     
   
@@ -89,7 +92,7 @@
   
  CHARMM>        read psf unit 10 card
  MAINIO> Protein structure file being read from unit  10.
- psf_read_formatted: Reading PSF in the expanded format.
+ PSFRD2> Reading PSF in the expanded format.
  TITLE>  * 5.9 -56.8665638
  TITLE>  *  DATE:    10/24/24     14:48:52      CREATED BY USER: ynan
  TITLE>  *
@@ -99,10 +102,10 @@
          Number of atoms         =        4   Number of groups     =        2
          Number of bonds         =        2   Number of angles     =        0
          Number of dihedrals     =        0   Number of impropers  =        0
-         Number of cross-terms   =        0   Number of autogens   =        0
+         Number of cross-terms   =        0
          Number of HB acceptors  =        0   Number of HB donors  =        0
          Number of NB exclusions =        0   Total charge =    0.00000
-         Number of Drudes        =        2
+         Number of Drudes        =        0
          Number of true-bonds    =        2   Number of zero-bonds =        0
          Number of aniso. terms  =        0   Number of lone-pairs =        0
   
@@ -206,9 +209,8 @@
  NBXMOD =      5
  PME EWALD OPTIONS: KAPPA  =  0.320  QCOR =  0.000  Bspline order = 6
  FFTX= 360  FFTY= 360  FFTZ= 360
-                Using FFTW
+                Using Pub FFT
                 Real-to-Complex FFT
-                Using Column FFT 
  There are        0 atom  pairs and        0 atom  exclusions.
  There are        0 group pairs and        0 group exclusions.
  <MAKINB> with mode   5 found      2 exclusions and      0 interactions(1-4)
@@ -236,9 +238,8 @@
  NBXMOD =      5
  PME EWALD OPTIONS: KAPPA  =  0.320  QCOR =  0.000  Bspline order = 6
  FFTX= 360  FFTY= 360  FFTZ= 360
-                Using FFTW
+                Using Pub FFT
                 Real-to-Complex FFT
-                Using Column FFT 
  There are        4 atom  pairs and        2 atom  exclusions.
  There are        0 group pairs and        0 group exclusions.
  Generating nonbond list with Exclusion mode = 5
@@ -249,15 +250,14 @@
         1 SPECIFIC THOLE SHIELDING PAIRS FOUND 
         0 GROUP PAIRS REQUIRED ATOM SEARCHES
 
-Splitting recip cores into (y by z):   1 by    1
 ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
 ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
 ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
 ENER EWALD:          EWKSum       EWSElf       EWEXcl       EWQCor       EWUTil
  ----------       ---------    ---------    ---------    ---------    ---------
-ENER>        0    -47.75809      0.00000    106.72362
+ENER>        0          NaN      0.00000          NaN
 ENER INTERN>        0.43850      0.00000      0.00000      0.00000      0.00000
-ENER EXTERN>       58.57939    -10.99310      0.00000      0.00000      0.00000
+ENER EXTERN>        2.15190          NaN      0.00000      0.00000      0.00000
 ENER EWALD>        24.15139  -1277.63727   1157.70301      0.00000      0.00000
  ----------       ---------    ---------    ---------    ---------    ---------
   
@@ -286,12 +286,12 @@ ENER EWALD>        24.15139  -1277.63727   1157.70301      0.00000      0.00000
  Parameter: CMAP <- "0"
   
  CHARMM>    set vdw      ?VDW
- RDCMND substituted energy or value "?VDW" to "58.5793917"
- Parameter: VDW <- "58.5793917"
+ RDCMND substituted energy or value "?VDW" to "2.15189824"
+ Parameter: VDW <- "2.15189824"
   
  CHARMM>    set elec     ?ELEC
- RDCMND substituted energy or value "?ELEC" to "-10.9931027"
- Parameter: ELEC <- "-10.9931027"
+ RDCMND substituted energy or value "?ELEC" to "NaN"
+ Parameter: ELEC <- "NaN"
   
  CHARMM>    set ewks     ?EWKS
  RDCMND substituted energy or value "?EWKS" to "24.1513902"
@@ -311,13 +311,13 @@ ENER EWALD>        24.15139  -1277.63727   1157.70301      0.00000      0.00000
  Parameter: EWKS -> "24.1513902"
  Parameter: EWEX -> "1157.70301"
  Parameter: EWSE -> "-1277.63727"
- Parameter: ELEC -> "-10.9931027"
-Evaluating: 24.1513902+1157.70301+-1277.63727+-10.9931027
- Parameter: ELE <- "-106.775973"
+ Parameter: ELEC -> "NaN"
+Evaluating: 24.1513902+1157.70301+-1277.63727+NaN
+ Parameter: ELE <- "NaN"
   
  CHARMM>    set tote   ?ENER
- RDCMND substituted energy or value "?ENER" to "-47.7580873"
- Parameter: TOTE <- "-47.7580873"
+ RDCMND substituted energy or value "?ENER" to "NaN"
+ Parameter: TOTE <- "NaN"
   
  CHARMM>     
   
@@ -330,7 +330,7 @@ Evaluating: 24.1513902+1157.70301+-1277.63727+-10.9931027
  CHARMM>    write title unit 99
  RDTITL> * PRINTING ENERGY COMPONENTS FOR NA-CL SYSTEM SWITCH_PME
  RDTITL> * DISTANCE (A),  TOTAL ENERGY (KCAL/MOL)
- RDTITL> * 2.8  -47.7580873
+ RDTITL> * 2.8  NaN
  RDTITL> * I
  RDTITL> * BOND 0.4385
  RDTITL> * ANGL 0
@@ -338,11 +338,11 @@ Evaluating: 24.1513902+1157.70301+-1277.63727+-10.9931027
  RDTITL> * UREY 0
  RDTITL> * IMPR 0
  RDTITL> * CMAP 0
- RDTITL> * VDW  58.5793917
- RDTITL> * ELE  -106.775973
+ RDTITL> * VDW  2.15189824
+ RDTITL> * ELE  NaN
  RDTITL> * DRUD :REFLECTS IN BONDED INTERACTION IN CHARMM
  RDTITL> * OTH1
- RDTITL> * TOTE -47.7580873
+ RDTITL> * TOTE NaN
  RDTITL> *
   
  CHARMM>     
@@ -352,25 +352,24 @@ Evaluating: 24.1513902+1157.70301+-1277.63727+-10.9931027
 $$$$$$  New timer profile $$$$$
    List time                       0.00 Other:            0.00
             Direct Ewald time               0.00 Other:            0.00
-               Fill charge grid                0.11 Other:            0.00
-               Scalar sum                      0.37 Other:            0.00
+               Fill charge grid                0.09 Other:            0.00
+               Scalar sum                      1.67 Other:            0.00
                Grad sum                        0.00 Other:            0.00
-                  FFTcomm                         0.40 Other:            0.00
-               FFT                             1.73 Other:            1.33
-            Recip Ewald time                2.24 Other:            0.04
-         Ewald time                      2.24 Other:            0.00
-      Nonbond force                   2.24 Other:            0.00
+               FFT                             1.71 Other:            0.00
+            Recip Ewald time                3.48 Other:            0.01
+         Ewald time                      3.48 Other:            0.00
+      Nonbond force                   3.48 Other:            0.00
          Bond energy                     0.00 Other:            0.00
          Angle energy                    0.00 Other:            0.00
          Dihedral energy                 0.00 Other:            0.00
          Restraints energy               0.00 Other:            0.00
       INTRNL energy                   0.00 Other:            0.00
-   Energy time                     2.24 Other:            0.00
- Total time                      2.33 Other:            0.09
+   Energy time                     3.48 Other:            0.00
+ Total time                      3.57 Other:            0.08
 
                     NORMAL TERMINATION BY NORMAL STOP
                     NO WARNINGS WERE ISSUED
 
                     $$$$$ JOB ACCOUNTING INFORMATION $$$$$
-                     ELAPSED TIME:     2.33  SECONDS 
-                         CPU TIME:     2.33  SECONDS 
+                     ELAPSED TIME:     3.57  SECONDS 
+                         CPU TIME:     3.57  SECONDS 

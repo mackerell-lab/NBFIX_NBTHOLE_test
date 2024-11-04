@@ -91,11 +91,11 @@ DRUD     0.0   -0.0000    0.0100 ! Generic Drudes
 
 
 NBFIX
-SODD    CLAD   -0.04762  5.09000 ! test
+!SODD    CLAD   -0.04762  5.09000 ! test
 
 
 THOLE TCUT 5.0 MAXNBTHOLE 5000 
-SODD    CLAD   1.00000 ! test 
+!SODD    CLAD   1.00000 ! test 
 
 
 END

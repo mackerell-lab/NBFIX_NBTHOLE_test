@@ -54,7 +54,7 @@ set ewse     ?EWSE
 calc ele = @ewks + @ewex + @ewse + @elec
 set tote   ?ENER
 
-open write unit 99 card name ../Output_CHARMM_switch.out
+open write unit 99 card name ./Output_CHARMM_switch.out
 
 write title unit 99
 * Printing Energy Components for Na-Cl system switch_pme

@@ -1,11 +1,11 @@
 1
                  Chemistry at HARvard Macromolecular Mechanics
-           (CHARMM) - Developmental Version 48b2   February 15, 2024            
-                            Git commit ID 0bbe2e2f5                             
-       Copyright(c) 1984-2023  President and Fellows of Harvard College
+           (CHARMM) - Developmental Version 44b2   February 15, 2020            
+                                 Git commit ID                                  
+       Copyright(c) 1984-2014  President and Fellows of Harvard College
                               All Rights Reserved
          Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
-                 Created on 11/4/24 at 13:38:16 by user: ynan        
+                 Created on 11/4/24 at 12:18:24 by user: ynan        
 
             Maximum number of ATOMS:    360720, and RESidues:      120240
  RDTITL> * ION INTERACTION ENERGY SURFACE
@@ -15,10 +15,6 @@
   
  CHARMM>    iofo exte
  MISCOM> Expanded I/O format is used.
-  
- CHARMM>     
-  
- CHARMM>     
   
  CHARMM>     
   
@@ -46,6 +42,9 @@
 
  DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
  Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+ **** Warning ****  The following extraneous characters
+ were found while command processing in RTF reader
+ NOANG NODIH
   
  CHARMM>     
   
@@ -63,6 +62,8 @@
  VCLOSE: Closing unit   99 with status "KEEP"
 
                     RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
   
  CHARMM>     
   
@@ -89,7 +90,7 @@
   
  CHARMM>        read psf unit 10 card
  MAINIO> Protein structure file being read from unit  10.
- psf_read_formatted: Reading PSF in the expanded format.
+ PSFRD2> Reading PSF in the expanded format.
  TITLE>  * 5.9 -56.8665638
  TITLE>  *  DATE:    10/24/24     14:48:52      CREATED BY USER: ynan
  TITLE>  *
@@ -99,10 +100,10 @@
          Number of atoms         =        4   Number of groups     =        2
          Number of bonds         =        2   Number of angles     =        0
          Number of dihedrals     =        0   Number of impropers  =        0
-         Number of cross-terms   =        0   Number of autogens   =        0
+         Number of cross-terms   =        0
          Number of HB acceptors  =        0   Number of HB donors  =        0
          Number of NB exclusions =        0   Total charge =    0.00000
-         Number of Drudes        =        2
+         Number of Drudes        =        0
          Number of true-bonds    =        2   Number of zero-bonds =        0
          Number of aniso. terms  =        0   Number of lone-pairs =        0
   
@@ -175,6 +176,13 @@
   
  CHARMM>     
   
+ CHARMM>    fast off ! for ljpme
+ Hardwired Periodic Boundaries: 
+              Turned Off
+ MISCOM> FAST option: OFF (full feature routines)
+  
+ CHARMM>     
+  
  CHARMM>    set fftx = 360
  Parameter: FFTX <- "360"
   
@@ -186,80 +194,109 @@
   
  CHARMM>     
   
- CHARMM>    nbonds atom vatom switch vswitch -
- CHARMM>        cutnb 14.0 ctonnb 10.0 ctofnb 12.0 -
- CHARMM>        ewald pmewald kappa 0.32 fftx @fftx ffty @ffty fftz @fftz order 6
+ CHARMM>    set dk = 0.4
+ Parameter: DK <- "0.4"
+  
+ CHARMM>    nbonds atom vatom vswitch bycb -
+ CHARMM>           ctonnb 9.0 ctofnb 8.0 cutnb 13.5 cutim 13.5 -
+ CHARMM>           inbfrq -1 imgfrq -1 wmin 1.0 cdie eps 1.0 -
+ CHARMM>           ewald pmew fftx @fftx ffty @ffty fftz @fftz  kappa .34 spline order 6 -
+ CHARMM>           dpme dkappa @dk dftx @fftx dfty @fftx dftz @fftx dorder 6
  Parameter: FFTX -> "360"
  Parameter: FFTY -> "360"
  Parameter: FFTZ -> "360"
+ Parameter: DK -> "0.4"
+ Parameter: FFTX -> "360"
+ Parameter: FFTX -> "360"
+ Parameter: FFTX -> "360"
  <PME> Total heap storage needed =    94748611
- Fill Ewald table: Number of points=     10000 EWXmax=    4.000000
- fill erfc table: linear inter has rms error = 0.894102D-08 maximum error = 0.193763D-07
- fill erfc table: cubic spline has rms error = 0.310057D-11 maximum error = 0.904055D-11
+ Fill Ewald table: Number of points=     10000 EWXmax=    2.890000
+ fill erfc table: linear inter has rms error = 0.549090D-08 maximum error = 0.101145D-07
+ fill erfc table: cubic spline has rms error = 0.137181D-11 maximum error = 0.340972D-11
 
  NONBOND OPTION FLAGS: 
      ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
-     BYGRoup  NOEXtnd  EWALd   
- CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+     BYCB     NOEXtnd  EWALd   
+ CUTNB  = 13.500 CTEXNB =999.000 CTONNB =  9.000 CTOFNB =  8.000
  CGONNB =  0.000 CGOFNB = 10.000
- WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
  NBXMOD =      5
- PME EWALD OPTIONS: KAPPA  =  0.320  QCOR =  0.000  Bspline order = 6
+ PME EWALD OPTIONS: KAPPA  =  0.340  QCOR =  0.000  Bspline order = 6
  FFTX= 360  FFTY= 360  FFTZ= 360
-                Using FFTW
+                Using Pub FFT
                 Real-to-Complex FFT
-                Using Column FFT 
  There are        0 atom  pairs and        0 atom  exclusions.
  There are        0 group pairs and        0 group exclusions.
+ GTNBCT> CUTNB,CTOFNB,CTONNB=      13.5       8.0       9.0
+
+      ***** LEVEL  1 WARNING FROM <GTNBCT> *****
+      ***** CUTNB,CTOFNB,CTONNB are not in correct order.
+      ******************************************
+      BOMLEV (  0) IS NOT REACHED. WRNLEV IS  5
+
  <MAKINB> with mode   5 found      2 exclusions and      0 interactions(1-4)
  <MAKGRP> found      0 group exclusions.
  Generating nonbond list with Exclusion mode = 5
  Allocate space for   5000 Thole shielding pairs 
- == PRIMARY == SPACE FOR       33 ATOM PAIRS AND        0 GROUP PAIRS
-
- General atom nonbond list generation found:
-        4 ATOM PAIRS WERE FOUND FOR ATOM LIST
-        1 SPECIFIC THOLE SHIELDING PAIRS FOUND 
-        0 GROUP PAIRS REQUIRED ATOM SEARCHES
-
+ == PRIMARY == SPACE FOR        0 ATOM PAIRS AND        0 GROUP PAIRS
+ == IMAGES === SPACE FOR        0 ATOM PAIRS AND        0 GROUP PAIRS
   
- CHARMM>     
+ =========================================
+              TRIAL run of list...........
+ =========================================
+Using Image CUBE search
+Using Image CUBE search
+  NBNDGCM found:
+           4  atom pairs
+           0  image atom pairs
+           0  self atom pairs
+ **** Warning ****  The following extraneous characters
+ were found while command processing in CHARMM
+ CUTIM 13.5  IMGFRQ -1            DPME DKAPPA 0.4 DFTX 360 DFTY 360 DFTZ 360 DOR
+ DER 6
   
  CHARMM>    energy
 
  NONBOND OPTION FLAGS: 
      ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
-     BYGRoup  NOEXtnd  EWALd   
- CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+     BYCB     NOEXtnd  EWALd   
+ CUTNB  = 13.500 CTEXNB =999.000 CTONNB =  9.000 CTOFNB =  8.000
  CGONNB =  0.000 CGOFNB = 10.000
- WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ WMIN   =  1.000 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
  NBXMOD =      5
- PME EWALD OPTIONS: KAPPA  =  0.320  QCOR =  0.000  Bspline order = 6
+ PME EWALD OPTIONS: KAPPA  =  0.340  QCOR =  0.000  Bspline order = 6
  FFTX= 360  FFTY= 360  FFTZ= 360
-                Using FFTW
+                Using Pub FFT
                 Real-to-Complex FFT
-                Using Column FFT 
  There are        4 atom  pairs and        2 atom  exclusions.
  There are        0 group pairs and        0 group exclusions.
+ GTNBCT> CUTNB,CTOFNB,CTONNB=      13.5       8.0       9.0
+
+      ***** LEVEL  1 WARNING FROM <GTNBCT> *****
+      ***** CUTNB,CTOFNB,CTONNB are not in correct order.
+      ******************************************
+      BOMLEV (  0) IS NOT REACHED. WRNLEV IS  5
+
  Generating nonbond list with Exclusion mode = 5
- == PRIMARY == SPACE FOR       33 ATOM PAIRS AND        0 GROUP PAIRS
-
- General atom nonbond list generation found:
-        4 ATOM PAIRS WERE FOUND FOR ATOM LIST
-        1 SPECIFIC THOLE SHIELDING PAIRS FOUND 
-        0 GROUP PAIRS REQUIRED ATOM SEARCHES
-
-Splitting recip cores into (y by z):   1 by    1
+ == PRIMARY == SPACE FOR      200 ATOM PAIRS AND        0 GROUP PAIRS
+ == IMAGES === SPACE FOR        0 ATOM PAIRS AND        0 GROUP PAIRS
+Using Image CUBE search
+  NBNDGCM found:
+           4  atom pairs
+           0  image atom pairs
+           0  self atom pairs
 ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
 ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
 ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
 ENER EWALD:          EWKSum       EWSElf       EWEXcl       EWQCor       EWUTil
  ----------       ---------    ---------    ---------    ---------    ---------
-ENER>        0    -47.75809      0.00000    106.72362
+ENER>        0   -120.48529      0.00000     46.79280
 ENER INTERN>        0.43850      0.00000      0.00000      0.00000      0.00000
-ENER EXTERN>       58.57939    -10.99310      0.00000      0.00000      0.00000
-ENER EWALD>        24.15139  -1277.63727   1157.70301      0.00000      0.00000
+ENER EXTERN>        2.15190    -23.89730      0.00000      0.00000      0.00000
+ENER EWALD>        28.25580  -1357.48960   1230.05542      0.00000      0.00000
  ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>     
   
  CHARMM>    set bonds    ?BOND
  RDCMND substituted energy or value "?BOND" to "0.4385"
@@ -286,51 +323,51 @@ ENER EWALD>        24.15139  -1277.63727   1157.70301      0.00000      0.00000
  Parameter: CMAP <- "0"
   
  CHARMM>    set vdw      ?VDW
- RDCMND substituted energy or value "?VDW" to "58.5793917"
- Parameter: VDW <- "58.5793917"
+ RDCMND substituted energy or value "?VDW" to "2.15189824"
+ Parameter: VDW <- "2.15189824"
   
  CHARMM>    set elec     ?ELEC
- RDCMND substituted energy or value "?ELEC" to "-10.9931027"
- Parameter: ELEC <- "-10.9931027"
+ RDCMND substituted energy or value "?ELEC" to "-23.8972992"
+ Parameter: ELEC <- "-23.8972992"
   
  CHARMM>    set ewks     ?EWKS
- RDCMND substituted energy or value "?EWKS" to "24.1513902"
- Parameter: EWKS <- "24.1513902"
+ RDCMND substituted energy or value "?EWKS" to "28.2557992"
+ Parameter: EWKS <- "28.2557992"
   
  CHARMM>    set ewex     ?EWEX
- RDCMND substituted energy or value "?EWEX" to "1157.70301"
- Parameter: EWEX <- "1157.70301"
+ RDCMND substituted energy or value "?EWEX" to "1230.05542"
+ Parameter: EWEX <- "1230.05542"
   
  CHARMM>    set ewse     ?EWSE
- RDCMND substituted energy or value "?EWSE" to "-1277.63727"
- Parameter: EWSE <- "-1277.63727"
+ RDCMND substituted energy or value "?EWSE" to "-1357.4896"
+ Parameter: EWSE <- "-1357.4896"
   
  CHARMM>     
   
  CHARMM>    calc ele = @ewks + @ewex + @ewse + @elec
- Parameter: EWKS -> "24.1513902"
- Parameter: EWEX -> "1157.70301"
- Parameter: EWSE -> "-1277.63727"
- Parameter: ELEC -> "-10.9931027"
-Evaluating: 24.1513902+1157.70301+-1277.63727+-10.9931027
- Parameter: ELE <- "-106.775973"
+ Parameter: EWKS -> "28.2557992"
+ Parameter: EWEX -> "1230.05542"
+ Parameter: EWSE -> "-1357.4896"
+ Parameter: ELEC -> "-23.8972992"
+Evaluating: 28.2557992+1230.05542+-1357.4896+-23.8972992
+ Parameter: ELE <- "-123.07568"
   
  CHARMM>    set tote   ?ENER
- RDCMND substituted energy or value "?ENER" to "-47.7580873"
- Parameter: TOTE <- "-47.7580873"
+ RDCMND substituted energy or value "?ENER" to "-120.485288"
+ Parameter: TOTE <- "-120.485288"
   
  CHARMM>     
   
- CHARMM>    open write unit 99 card name ./Output_CHARMM_switch.out
- VOPEN> Attempting to open::./output_charmm_switch.out::
- OPNLGU> Unit 99 opened for WRITE access to ./output_charmm_switch.out
+ CHARMM>    open write unit 99 card name ./Output_CHARMM_ljpme.out
+ VOPEN> Attempting to open::./output_charmm_ljpme.out::
+ OPNLGU> Unit 99 opened for WRITE access to ./output_charmm_ljpme.out
   
  CHARMM>     
   
  CHARMM>    write title unit 99
- RDTITL> * PRINTING ENERGY COMPONENTS FOR NA-CL SYSTEM SWITCH_PME
+ RDTITL> * PRINTING ENERGY COMPONENTS FOR NA-CL SYSTEM LJPME
  RDTITL> * DISTANCE (A),  TOTAL ENERGY (KCAL/MOL)
- RDTITL> * 2.8  -47.7580873
+ RDTITL> * 2.8  -120.485288
  RDTITL> * I
  RDTITL> * BOND 0.4385
  RDTITL> * ANGL 0
@@ -338,39 +375,45 @@ Evaluating: 24.1513902+1157.70301+-1277.63727+-10.9931027
  RDTITL> * UREY 0
  RDTITL> * IMPR 0
  RDTITL> * CMAP 0
- RDTITL> * VDW  58.5793917
- RDTITL> * ELE  -106.775973
+ RDTITL> * VDW  2.15189824
+ RDTITL> * ELE  -123.07568
  RDTITL> * DRUD :REFLECTS IN BONDED INTERACTION IN CHARMM
  RDTITL> * OTH1
- RDTITL> * TOTE -47.7580873
+ RDTITL> * TOTE -120.485288
  RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
   
  CHARMM>     
   
  CHARMM>    stop
  VCLOSE: Closing unit   99 with status "KEEP"
 $$$$$$  New timer profile $$$$$
+      xdistm setup                    0.00 Other:            0.00
+      xdistm Build list               0.00 Other:            0.00
    List time                       0.00 Other:            0.00
-            Direct Ewald time               0.00 Other:            0.00
-               Fill charge grid                0.11 Other:            0.00
-               Scalar sum                      0.37 Other:            0.00
+               Fill charge grid                0.09 Other:            0.00
+               Scalar sum                      1.68 Other:            0.00
                Grad sum                        0.00 Other:            0.00
-                  FFTcomm                         0.40 Other:            0.00
-               FFT                             1.73 Other:            1.33
-            Recip Ewald time                2.24 Other:            0.04
-         Ewald time                      2.24 Other:            0.00
-      Nonbond force                   2.24 Other:            0.00
+               FFT                             1.70 Other:            0.00
+            Recip Ewald time                3.48 Other:            0.01
+         Ewald time                      3.48 Other:            0.00
+      Nonbond force                   3.48 Other:            0.00
          Bond energy                     0.00 Other:            0.00
          Angle energy                    0.00 Other:            0.00
          Dihedral energy                 0.00 Other:            0.00
          Restraints energy               0.00 Other:            0.00
       INTRNL energy                   0.00 Other:            0.00
-   Energy time                     2.24 Other:            0.00
- Total time                      2.33 Other:            0.09
+   Energy time                     3.48 Other:            0.00
+ Total time                      3.55 Other:            0.08
 
                     NORMAL TERMINATION BY NORMAL STOP
-                    NO WARNINGS WERE ISSUED
+                    MOST SEVERE WARNING WAS AT LEVEL  1
 
                     $$$$$ JOB ACCOUNTING INFORMATION $$$$$
-                     ELAPSED TIME:     2.33  SECONDS 
-                         CPU TIME:     2.33  SECONDS 
+                     ELAPSED TIME:     3.55  SECONDS 
+                         CPU TIME:     3.55  SECONDS 
