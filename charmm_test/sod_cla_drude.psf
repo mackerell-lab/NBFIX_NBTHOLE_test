@@ -1,0 +1,47 @@
+PSF EXT CMAP DRUDE XPLOR AUTOG
+
+         2 !NTITLE
+* 5.9 -56.8665638                                                               
+*  DATE:    10/24/24     14:48:52      CREATED BY USER: ynan                    
+
+         4 !NATOM
+         1 SOD      1        SOD      SOD      SODD      1.68760       22.6000           0 -0.157000       1.30000    
+         2 SOD      1        SOD      DSOD     DRUD    -0.687600      0.400000           0   0.00000       0.00000    
+         3 CLA      1        CLA      CLA      CLAD      2.45720       35.0532           0  -3.96900       1.30000    
+         4 CLA      1        CLA      DCLA     DRUD     -3.45720      0.400000           0   0.00000       0.00000    
+
+         2 !NBOND: bonds
+         1         2         3         4
+
+         0 !NTHETA: angles
+
+
+         0 !NPHI: dihedrals
+
+
+         0 !NIMPHI: impropers
+
+
+         0 !NDON: donors
+
+
+         0 !NACC: acceptors
+
+
+         0 !NNB
+
+         0         0         0         0
+
+         2         0 !NGRP NST2
+         0         2         0         2         2         0
+
+         0         0 !NUMLP NUMLPH
+
+         0 !NUMANISO
+
+         0 !NCRTERM: cross-terms
+
+
+         0 !AUTOGEN
+         0        15         0        15
+         0         0

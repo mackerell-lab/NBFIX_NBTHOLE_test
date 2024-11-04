@@ -1,0 +1,2 @@
+/home/ynan/miniconda3/envs/ommsimu/lib/python3.12/site-packages/openmm/app/internal/pdbstructure.py:443: UserWarning: WARNING: two consecutive residues with same number (ATOM      3  CLA CLA     1       0.000   0.000   1.111  1.00  0.00      CLA     , ATOM      2 DSOD SOD     1       0.000   0.000  -1.695  1.00  0.00      SOD     )
+  warnings.warn("WARNING: two consecutive residues with same number (%s, %s)" % (atom, self._current_residue.atoms[-1]))

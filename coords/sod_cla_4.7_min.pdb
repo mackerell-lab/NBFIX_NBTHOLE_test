@@ -1,0 +1,8 @@
+REMARK  4.6 -59.0895984                                                               
+REMARK   DATE:    10/24/24     14:52:31      CREATED BY USER: ynan                    
+ATOM      1  SOD SOD     1       0.000   0.000  -2.836  1.00  0.00      SOD 
+ATOM      2 DSOD SOD     1       0.000   0.000  -2.841  1.00  0.00      SOD 
+ATOM      3  CLA CLA     1       0.000   0.000   1.864  1.00  0.00      CLA 
+ATOM      4 DCLA CLA     1       0.000   0.000   1.840  1.00  0.00      CLA 
+TER       5      CLA      1
+END

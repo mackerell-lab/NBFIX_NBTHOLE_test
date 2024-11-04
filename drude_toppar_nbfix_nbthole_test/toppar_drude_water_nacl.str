@@ -1,0 +1,101 @@
+* DRUDE topology and parameter stream file 
+* template for water
+*
+
+ioformat extended
+
+read rtf card !append 
+* Topology for drude water, ions and proteins
+* 
+41
+
+MASS    -1 HDWHL     1.00800 H  ! water H, SWHL (SWM4-HLJ)
+MASS    -1 ODWHL    15.99940 O  ! water O, SWHL (SWM4-HLJ)
+MASS    -1 LPDWHL    0.00000 H  ! water LP: SWHL (SWM4-HLJ)
+MASS    -1 DWOHL     0.00000 H  ! water Drude, SWHL (SWM4-HLJ)
+MASS    -1 SODD     23.00000 Na ! Sodium
+MASS    -1 CLAD     35.45320 CL ! Chloride
+MASS    -1 DRUD      0.00000 H  ! drude particle
+
+DECL -CA 
+DECL -C 
+DECL -O 
+DECL +N 
+DECL +HN 
+DECL +CA 
+
+!DEFA FIRS NTER LAST CTER 
+!reset default patches 
+DEFA FIRS NONE LAST NONE 
+AUTOGENERATE ANGLES DIHEDRALS DRUDE PATCH  !note use of DRUDE and PATCH
+
+RESI SWHL          0.000 NOANG NODIH ! SWM4-HLJ water, Drude FF default water
+GROUP
+ATOM OH2  ODWHL   -0.1000 TYPE DWOHL ALPHA -1.0317 THOLE 1.3
+ATOM OM   LPDWHL  -0.9571
+ATOM H1   HDWHL    0.52855
+ATOM H2   HDWHL    0.52855
+BOND OH2 H1
+BOND OH2 H2
+BOND OH2 OM
+BOND H1  H2 ! for SHAKE
+ANGLE  H1 OH2 H2
+ACCEPTOR OH2
+LONEPAIR bisector OM OH2 H1 H2 distance 0.217 angle 0.0 dihe 0.0
+IC   H1   OH2   H2    H1    0.9572  108.12     0.00   35.94   1.54996
+IC   H1   OM   *OH2   H2    0.9572   54.06   180.00   54.06   0.9572
+IC   H2   H1    OH2   OM    1.54996  35.94     0.01   54.06   0.217
+PATCH FIRST NONE LAST NONE
+
+
+RESI SOD           1.000 ! Sodium Ion
+GROUP
+ATOM SOD  SODD     1.000  ALPHA -0.157
+PATCHING FIRST NONE LAST NONE
+
+RESI CLA          -1.000 ! Chloride Ion
+GROUP
+ATOM CLA  CLAD    -1.000  ALPHA -3.969
+PATCHING FIRST NONE LAST NONE
+
+
+end 
+
+
+read para card !append 
+* Drude polarizable FF parameters 
+* 
+ 
+BONDS
+ODWHL    HDWHL    450.00      0.9572 ! SWHL
+ODWHL    DWOHL    500.00      0.0000 ! SWHL
+HDWHL    HDWHL      0.00      1.54996 ! SWHL
+ODWHL    LPDWHL     0.00      0.2170 ! SWHL
+X        DRUD     500.00      0.000 ! DO NOT COMMENT. Essential for use of Drudes in c46b1 and maybe more. Bug...
+
+
+ANGLES 
+HDWHL    ODWHL    HDWHL     55.000   108.12 ! SWHL
+
+
+NONBONDED nbxmod  5 atom vatom cdiel vdistance switch vswitch - 
+cutnb 16.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5 
+
+HDWHL    0.0   -0.0050     0.7000 ! SWHL
+ODWHL    0.0   -0.1177     1.8081 ! SWHL
+LPDWHL   0.0   -0.0000     0.0100 ! SWHL
+DWOHL    0.0   -0.0000     0.0100 ! SWHL Drude
+SODD     0.0   -0.03151    1.4616800 ! Na
+CLAD     0.0   -0.0719737  2.4811139 ! Cloride
+DRUD     0.0   -0.0000    0.0100 ! Generic Drudes
+
+
+NBFIX
+SODD    CLAD   -0.04762  4.09000 ! chloride, Savelyev-2014
+
+
+THOLE TCUT 5.0 MAXNBTHOLE 5000 
+SODD    CLAD   0.50000
+
+
+END

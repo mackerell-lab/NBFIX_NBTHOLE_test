@@ -1,0 +1,15 @@
+Printing Energy Components for Na-Cl system 
+Distance (A),  Total Energy (kcal/mol)
+2.8 -69.629
+
+BOND 0.0
+ANGL 0.0
+DIHE 0.0
+UREY 0.0
+IMPR 0.0
+CMAP 0.0
+VDW  3.568
+ELE  -73.636
+DRUD 0.438
+OTH1 0.0
+TOTE -69.629
