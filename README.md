@@ -7,7 +7,7 @@ This folder contains scripts and resources for testing the NBFIX and NBTHOLE par
 
 - **`run_charmm.sh`**: Script to run the CHARMM test.
 - **`run_openmm.sh`**: Script to run the OpenMM test.
-- **`bench_mark`**: Folder containing benchmark data for performance and accuracy comparisons.
+- **`bench_mark`**: File containing benchmark data for performance and accuracy comparisons.
 
 ## How to Run the Tests
 
@@ -28,4 +28,9 @@ To execute the tests, follow these steps:
 ## Viewing Benchmark Results
 
 The bench_mark file contains benchmark data for comparison. 
+
+## Results
+
+Results are written in Result_CHARMM.txt and Result_OPENMM.txt
+Due to variations in values across different software, we have established a relatively lenient pass criterion: an energy difference of less than 0.1 kcal. If NBFIX or NBTHOLE is ineffective, the energy difference will be significantly higher.
 

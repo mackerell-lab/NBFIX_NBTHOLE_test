@@ -77,14 +77,14 @@ echo "Running ${method} ${FF} ..."
 diff1=$(echo "scale=5; if ($val2 > $b_vdw) $val2 - $b_vdw else $b_vdw - $val2" | bc)
 diff2=$(echo "scale=5; if ($ele_val > $b_ele) $ele_val - $b_ele else $b_ele - $ele_val" | bc)
 
-if (( $(echo "$diff1 < 0.01" | bc -l) )); then
+if (( $(echo "$diff1 < 0.1" | bc -l) )); then
     result1="pass"
 else
     result1="!!!!non-pass"
 fi
 
 
-if (( $(echo "$diff2 < 0.01" | bc -l) )); then
+if (( $(echo "$diff2 < 0.1" | bc -l) )); then
     result2="pass"
 else
     result2="!!!!non-pass"
