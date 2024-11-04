@@ -5,7 +5,7 @@
        Copyright(c) 1984-2023  President and Fellows of Harvard College
                               All Rights Reserved
          Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
-                 Created on 11/4/24 at 13:38:18 by user: ynan        
+                 Created on 11/4/24 at 14:55:25 by user: ynan        
 
             Maximum number of ATOMS:    360720, and RESidues:      120240
  RDTITL> * ION INTERACTION ENERGY SURFACE
@@ -251,4 +251,4 @@
 
                     $$$$$ JOB ACCOUNTING INFORMATION $$$$$
                      ELAPSED TIME:     0.03  SECONDS 
-                         CPU TIME:     0.03  SECONDS 
+                         CPU TIME:     0.02  SECONDS 

@@ -3,62 +3,62 @@
 ###################################
   
 >> switch COMB 
- VDW  2.15189824
- ELE  -123.075679
+ VDW  2.15189824 pass
+ ELE  -123.075679 pass
  
 >> ljpme COMB 
- VDW  2.15189824
- ELE  -123.07568
+ VDW  2.15189824 pass
+ ELE  -123.07568 pass
  
 >> switch NBFIX 
- VDW  58.5793917
- ELE  -123.075679
+ VDW  58.5793917 pass
+ ELE  -123.075679 pass
  
 >> ljpme NBFIX 
- VDW  58.5793917
- ELE  -123.07568
+ VDW  58.5793917 pass
+ ELE  -123.07568 pass
  
 >> switch NBTHOLE 
- VDW  2.15189824
- ELE  NaN
+ VDW  2.15189824 pass
+ ELE  NaN !!!!non-pass
  
 >> ljpme NBTHOLE 
- VDW  2.15189824
- ELE  -123.07568
+ VDW  2.15189824 pass
+ ELE  -123.07568 !!!!non-pass
  
 >> switch NBFIX_NBTHOLE 
- VDW  58.5793917
- ELE  NaN
+ VDW  58.5793917 pass
+ ELE  NaN !!!!non-pass
  
 >> ljpme NBFIX_NBTHOLE 
- VDW  58.5793917
- ELE  -123.07568
+ VDW  58.5793917 pass
+ ELE  -123.07568 !!!!non-pass
  
 ###################################
 # CHARMM Version charmm-c48a2-serial
 ###################################
   
 >> switch COMB 
- VDW  2.15189824
- ELE  -123.075679
+ VDW  2.15189824 pass
+ ELE  -123.075679 pass
  
 >> ljpme COMB 
  
 >> switch NBFIX 
- VDW  58.5793917
- ELE  -123.075679
+ VDW  58.5793917 pass
+ ELE  -123.075679 pass
  
 >> ljpme NBFIX 
  
 >> switch NBTHOLE 
- VDW  2.15189824
- ELE  -106.775973
+ VDW  2.15189824 pass
+ ELE  -106.775973 pass
  
 >> ljpme NBTHOLE 
  
 >> switch NBFIX_NBTHOLE 
- VDW  58.5793917
- ELE  -106.775973
+ VDW  58.5793917 pass
+ ELE  -106.775973 pass
  
 >> ljpme NBFIX_NBTHOLE 
  
@@ -67,62 +67,62 @@
 ###################################
   
 >> switch COMB 
- VDW  2.15189824
- ELE  -123.075679
+ VDW  2.15189824 pass
+ ELE  -123.075679 pass
  
 >> ljpme COMB 
- VDW  2.23185338
- ELE  -123.07568
+ VDW  2.23185338 pass
+ ELE  -123.07568 pass
  
 >> switch NBFIX 
- VDW  58.5793917
- ELE  -123.075679
+ VDW  58.5793917 pass
+ ELE  -123.075679 pass
  
 >> ljpme NBFIX 
- VDW  58.6593468
- ELE  -123.07568
+ VDW  58.6593468 pass
+ ELE  -123.07568 pass
  
 >> switch NBTHOLE 
- VDW  2.15189824
- ELE  -106.775973
+ VDW  2.15189824 pass
+ ELE  -106.775973 pass
  
 >> ljpme NBTHOLE 
- VDW  2.23185338
- ELE  -123.07568
+ VDW  2.23185338 pass
+ ELE  -123.07568 !!!!non-pass
  
 >> switch NBFIX_NBTHOLE 
- VDW  58.5793917
- ELE  -106.775973
+ VDW  58.5793917 pass
+ ELE  -106.775973 pass
  
 >> ljpme NBFIX_NBTHOLE 
- VDW  58.6593468
- ELE  -123.07568
+ VDW  58.6593468 pass
+ ELE  -123.07568 !!!!non-pass
  
 ###################################
 # CHARMM Version charmm-c48b2-serial-ljpme-avx
 ###################################
   
 >> switch COMB 
- VDW  2.15189824
- ELE  -123.075679
+ VDW  2.15189824 pass
+ ELE  -123.075679 pass
  
 >> ljpme COMB 
  
 >> switch NBFIX 
- VDW  58.5793917
- ELE  -123.075679
+ VDW  58.5793917 pass
+ ELE  -123.075679 pass
  
 >> ljpme NBFIX 
  
 >> switch NBTHOLE 
- VDW  2.15189824
- ELE  -106.775973
+ VDW  2.15189824 pass
+ ELE  -106.775973 pass
  
 >> ljpme NBTHOLE 
  
 >> switch NBFIX_NBTHOLE 
- VDW  58.5793917
- ELE  -106.775973
+ VDW  58.5793917 pass
+ ELE  -106.775973 pass
  
 >> ljpme NBFIX_NBTHOLE 
  
@@ -131,26 +131,26 @@
 ###################################
   
 >> switch COMB 
- VDW  2.15189824
- ELE  -123.075679
+ VDW  2.15189824 pass
+ ELE  -123.075679 pass
  
 >> ljpme COMB 
  
 >> switch NBFIX 
- VDW  58.5793917
- ELE  -123.075679
+ VDW  58.5793917 pass
+ ELE  -123.075679 pass
  
 >> ljpme NBFIX 
  
 >> switch NBTHOLE 
- VDW  2.15189824
- ELE  -106.775973
+ VDW  2.15189824 pass
+ ELE  -106.775973 pass
  
 >> ljpme NBTHOLE 
  
 >> switch NBFIX_NBTHOLE 
- VDW  58.5793917
- ELE  -106.775973
+ VDW  58.5793917 pass
+ ELE  -106.775973 pass
  
 >> ljpme NBFIX_NBTHOLE 
  
