@@ -31,6 +31,9 @@ The bench_mark file contains benchmark data for comparison.
 
 ## Results
 
-Results are written in Result_CHARMM.txt and Result_OPENMM.txt
+Results are written in 
+- **`Result_CHARMM.txt`**: CHARMM result
+- **` Result_OPENMM.txt`**: OPENMM result
+
 Due to variations in values across different software, we have established a relatively lenient pass criterion: an energy difference of less than 0.1 kcal. If NBFIX or NBTHOLE is ineffective, the energy difference will be significantly higher.
 
