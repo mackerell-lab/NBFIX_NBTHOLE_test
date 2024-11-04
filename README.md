@@ -25,12 +25,7 @@ To execute the tests, follow these steps:
    ./run_openmm.sh
    ```
 
-Alternatively, you can use the `run_tests.sh` script (if available) to automatically run both tests and log the output.
-
 ## Viewing Benchmark Results
 
-The `bench_mark` folder contains benchmark data for comparison. After running the tests, compare the outputs with these benchmarks to assess accuracy and performance.
+The bench_mark file contains benchmark data for comparison. 
 
----
-
-This `README.md` gives a clear overview of the project structure and instructions on how to run and review tests. Let me know if you'd like any additional customization!
