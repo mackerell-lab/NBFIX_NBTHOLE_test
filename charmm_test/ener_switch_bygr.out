@@ -5,7 +5,7 @@
        Copyright(c) 1984-2023  President and Fellows of Harvard College
                               All Rights Reserved
          Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
-                 Created on 11/5/24 at 16:10:57 by user: ynan        
+                 Created on 11/5/24 at 16:11:04 by user: ynan        
 
             Maximum number of ATOMS:    360720, and RESidues:      120240
  RDTITL> * ION INTERACTION ENERGY SURFACE
@@ -186,7 +186,7 @@
   
  CHARMM>     
   
- CHARMM>    nbonds atom vatom switch vswitch -
+ CHARMM>    nbonds atom vatom switch vswitch bygr -
  CHARMM>        cutnb 14.0 ctonnb 10.0 ctofnb 12.0 -
  CHARMM>        ewald pmewald kappa 0.32 fftx @fftx ffty @ffty fftz @fftz order 6
  Parameter: FFTX -> "360"
@@ -321,9 +321,9 @@ Evaluating: 24.1513902+1157.70301+-1277.63727+-10.9931027
   
  CHARMM>     
   
- CHARMM>    open write unit 99 card name ./Output_CHARMM_switch.out
- VOPEN> Attempting to open::./output_charmm_switch.out::
- OPNLGU> Unit 99 opened for WRITE access to ./output_charmm_switch.out
+ CHARMM>    open write unit 99 card name ./Output_CHARMM_switch_bygr.out
+ VOPEN> Attempting to open::./output_charmm_switch_bygr.out::
+ OPNLGU> Unit 99 opened for WRITE access to ./output_charmm_switch_bygr.out
   
  CHARMM>     
   
@@ -356,21 +356,21 @@ $$$$$$  New timer profile $$$$$
                Scalar sum                      0.37 Other:            0.00
                Grad sum                        0.01 Other:            0.00
                   FFTcomm                         0.45 Other:            0.00
-               FFT                             1.81 Other:            1.36
-            Recip Ewald time                2.34 Other:            0.04
-         Ewald time                      2.34 Other:            0.00
-      Nonbond force                   2.34 Other:            0.00
+               FFT                             1.82 Other:            1.37
+            Recip Ewald time                2.36 Other:            0.04
+         Ewald time                      2.36 Other:            0.00
+      Nonbond force                   2.36 Other:            0.00
          Bond energy                     0.00 Other:            0.00
          Angle energy                    0.00 Other:            0.00
          Dihedral energy                 0.00 Other:            0.00
          Restraints energy               0.00 Other:            0.00
       INTRNL energy                   0.00 Other:            0.00
-   Energy time                     2.34 Other:            0.00
- Total time                      2.45 Other:            0.11
+   Energy time                     2.36 Other:            0.00
+ Total time                      2.46 Other:            0.11
 
                     NORMAL TERMINATION BY NORMAL STOP
                     NO WARNINGS WERE ISSUED
 
                     $$$$$ JOB ACCOUNTING INFORMATION $$$$$
-                     ELAPSED TIME:     2.45  SECONDS 
-                         CPU TIME:     2.45  SECONDS 
+                     ELAPSED TIME:     2.47  SECONDS 
+                         CPU TIME:     2.46  SECONDS 

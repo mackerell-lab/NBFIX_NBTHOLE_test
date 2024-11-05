@@ -36,7 +36,7 @@ set ffty = 360
 set fftz = 360
 
 set dk = 0.4
-nbonds atom vatom vswitch -
+nbonds atom vatom vswitch bygr -
        ctonnb 9.0 ctofnb 8.0 cutnb 13.5 cutim 13.5 -
        inbfrq -1 imgfrq -1 wmin 1.0 cdie eps 1.0 -
        ewald pmew fftx @fftx ffty @ffty fftz @fftz  kappa .34 spline order 6 -
@@ -58,7 +58,7 @@ set ewse     ?EWSE
 calc ele = @ewks + @ewex + @ewse + @elec
 set tote   ?ENER
 
-open write unit 99 card name ./Output_CHARMM_ljpme.out
+open write unit 99 card name ./Output_CHARMM_ljpme_bygr.out
 
 write title unit 99
 * Printing Energy Components for Na-Cl system ljpme

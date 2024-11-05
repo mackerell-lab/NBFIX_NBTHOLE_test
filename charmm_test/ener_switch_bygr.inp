@@ -3,8 +3,9 @@
 
 iofo exte
 
-stream ../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
 
+
+stream ../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
 
 set ion  SOD 
 set resi CLA
@@ -29,20 +30,15 @@ set resi CLA
     crystal define cubic @x @y @z 90. 90. 90.
     crystal build cutoff 10. noper 0
 
-fast off ! for ljpme
-
 set fftx = 360
 set ffty = 360
 set fftz = 360
 
-set dk = 0.4
-nbonds atom vatom vswitch -
-       ctonnb 9.0 ctofnb 8.0 cutnb 13.5 cutim 13.5 -
-       inbfrq -1 imgfrq -1 wmin 1.0 cdie eps 1.0 -
-       ewald pmew fftx @fftx ffty @ffty fftz @fftz  kappa .34 spline order 6 -
-       dpme dkappa @dk dftx @fftx dfty @fftx dftz @fftx dorder 6
-energy
+nbonds atom vatom switch vswitch bygr -
+    cutnb 14.0 ctonnb 10.0 ctofnb 12.0 -
+    ewald pmewald kappa 0.32 fftx @fftx ffty @ffty fftz @fftz order 6
 
+energy
 set bonds    ?BOND
 set angle    ?ANGL
 set dihedral ?DIHE
@@ -58,13 +54,13 @@ set ewse     ?EWSE
 calc ele = @ewks + @ewex + @ewse + @elec
 set tote   ?ENER
 
-open write unit 99 card name ./Output_CHARMM_ljpme.out
+open write unit 99 card name ./Output_CHARMM_switch_bygr.out
 
 write title unit 99
-* Printing Energy Components for Na-Cl system ljpme
+* Printing Energy Components for Na-Cl system switch_pme
 * Distance (A),  Total Energy (kcal/mol)
 * @xnew  @tote
-* i   
+* i 
 * BOND @bonds
 * ANGL @angle
 * DIHE @dihedral
@@ -74,12 +70,9 @@ write title unit 99
 * VDW  @vdw
 * ELE  @ele
 * DRUD :reflects in bonded interaction in charmm
-* OTH1 
+* OTH1  
 * TOTE @tote
-*
-
-
-
+* 
 
 stop
 

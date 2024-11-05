@@ -1,0 +1,122 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+           (CHARMM) - Developmental Version 48b2   February 15, 2024            
+                                Revision unknown                                
+       Copyright(c) 1984-2023  President and Fellows of Harvard College
+                              All Rights Reserved
+         Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
+                 Created on 11/5/24 at 15:46:51 by user: ynan        
+
+            Maximum number of ATOMS:    360720, and RESidues:      120240
+ RDTITL> * ION INTERACTION ENERGY SURFACE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    iofo exte
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>     
+  
+ CHARMM>    stream ../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
+ VOPEN> Attempting to open::../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * DRUDE TOPOLOGY AND PARAMETER STREAM FILE
+ RDTITL> * TEMPLATE FOR WATER
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>     
+  
+ CHARMM>    read rtf card !append
+ MAINIO> Residue topology file being read from unit  99.
+ RDTITL> * TOPOLOGY FOR DRUDE WATER, IONS AND PROTEINS
+ RDTITL> *
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    read para card !append
+
+          PARAMETER FILE BEING READ FROM UNIT 99
+ RDTITL> * DRUDE POLARIZABLE FF PARAMETERS
+ RDTITL> *
+
+ PARRDR> WARNING: ATOMS IN BOND X        DRUD      500.00000   0.00000 DONT EXIST
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    set ion  SOD
+ Parameter: ION <- "SOD"
+  
+ CHARMM>    set resi CLA
+ Parameter: RESI <- "CLA"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>        set xnew = 2.8
+ Parameter: XNEW <- "2.8"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>        open read unit 10 card name ./sod_cla_drude.psf
+ VOPEN> Attempting to open::./sod_cla_drude.psf::
+ OPNLGU> Unit 10 opened for READONLY access to ./sod_cla_drude.psf
+  
+ CHARMM>        read psf unit 10 card
+ MAINIO> Protein structure file being read from unit  10.
+ psf_read_formatted: Reading PSF in the expanded format.
+ TITLE>  * 5.9 -56.8665638
+ TITLE>  *  DATE:    10/24/24     14:48:52      CREATED BY USER: ynan
+ TITLE>  *
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        4   Number of groups     =        2
+         Number of bonds         =        2   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0   Number of autogens   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        2   Number of zero-bonds =        0
+         Number of aniso. terms  =        0   Number of lone-pairs =        0
+  
+ CHARMM>     
+  
+ CHARMM>        open read unit 10 card name ../coords/@ion_@resi_@xnew_min.pdb
+ Parameter: ION -> "SOD"
+ Parameter: RESI -> "CLA"
+ Parameter: XNEW -> "2.8"
+ OPNLGU> Unit already open. The old file will be closed first.
+ VCLOSE: Closing unit   10 with status "KEEP"
+ VOPEN> Attempting to open::../coords/sod_cla_2.8_min.pdb::
+ OPNLGU> Unit 10 opened for READONLY access to ../coords/sod_cla_2.8_min.pdb
+  
+ CHARMM>        read coor unit 10 pdb resid
+  read CHARMM-pdb format
+          SPATIAL COORDINATES BEING READ FROM UNIT 10
+ TITLE>   2.7 -68.2249364
+ TITLE>    DATE:    10/24/24     14:52:30      CREATED BY USER: YNAN

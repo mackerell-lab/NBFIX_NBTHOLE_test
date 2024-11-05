@@ -194,7 +194,7 @@
  CHARMM>    set dk = 0.4
  Parameter: DK <- "0.4"
   
- CHARMM>    nbonds atom vatom vswitch -
+ CHARMM>    nbonds atom vatom vswitch bygr -
  CHARMM>           ctonnb 9.0 ctofnb 8.0 cutnb 13.5 cutim 13.5 -
  CHARMM>           inbfrq -1 imgfrq -1 wmin 1.0 cdie eps 1.0 -
  CHARMM>           ewald pmew fftx @fftx ffty @ffty fftz @fftz  kappa .34 spline order 6 -
