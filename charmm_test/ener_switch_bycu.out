@@ -1,11 +1,11 @@
 1
                  Chemistry at HARvard Macromolecular Mechanics
-           (CHARMM) - Developmental Version 48b2   February 15, 2024            
-                            Git commit ID 0bbe2e2f5                             
+           (CHARMM) - Developmental Version 50a1     August 15, 2024            
+                                Revision unknown                                
        Copyright(c) 1984-2023  President and Fellows of Harvard College
                               All Rights Reserved
          Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
-                 Created on 11/5/24 at 16:11:02 by user: ynan        
+                 Created on 11/5/24 at 17:01:24 by user: ynan        
 
             Maximum number of ATOMS:    360720, and RESidues:      120240
  RDTITL> * ION INTERACTION ENERGY SURFACE
@@ -358,27 +358,27 @@ Evaluating: 24.1513902+1157.70301+-1277.63727+-27.292809
  CHARMM>    stop
  VCLOSE: Closing unit   99 with status "KEEP"
 $$$$$$  New timer profile $$$$$
-   List time                       0.00 Other:            0.00
+   List time                       0.01 Other:            0.00
             Direct Ewald time               0.00 Other:            0.00
                Fill charge grid                0.10 Other:            0.00
                Scalar sum                      0.37 Other:            0.00
                Grad sum                        0.00 Other:            0.00
-                  FFTcomm                         0.38 Other:            0.00
-               FFT                             1.67 Other:            1.29
-            Recip Ewald time                2.18 Other:            0.04
-         Ewald time                      2.18 Other:            0.00
-      Nonbond force                   2.18 Other:            0.00
+                  FFTcomm                         0.35 Other:            0.00
+               FFT                             1.60 Other:            1.26
+            Recip Ewald time                2.11 Other:            0.04
+         Ewald time                      2.11 Other:            0.00
+      Nonbond force                   2.11 Other:            0.00
          Bond energy                     0.00 Other:            0.00
          Angle energy                    0.00 Other:            0.00
          Dihedral energy                 0.00 Other:            0.00
          Restraints energy               0.00 Other:            0.00
       INTRNL energy                   0.00 Other:            0.00
-   Energy time                     2.18 Other:            0.00
- Total time                      2.27 Other:            0.09
+   Energy time                     2.11 Other:            0.00
+ Total time                      2.24 Other:            0.11
 
                     NORMAL TERMINATION BY NORMAL STOP
                     NO WARNINGS WERE ISSUED
 
                     $$$$$ JOB ACCOUNTING INFORMATION $$$$$
-                     ELAPSED TIME:     2.27  SECONDS 
-                         CPU TIME:     2.27  SECONDS 
+                     ELAPSED TIME:     2.24  SECONDS 
+                         CPU TIME:     2.24  SECONDS 
