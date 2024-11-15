@@ -3,20 +3,12 @@
 ###################################
   
 >> ljpme COMB 
- VDW  2.15189824 pass
- ELE  -123.07568 pass
  
 >> ljpme_bycb COMB 
- VDW  2.15189824 pass
- ELE  -123.07568 pass
  
 >> ljpme_bycu COMB 
- VDW  2.15189824 pass
- ELE  -123.07568 pass
  
 >> ljpme_bygr COMB 
- VDW  2.15189824 pass
- ELE  -123.07568 pass
  
 >> switch COMB 
  VDW  2.15189824 pass
@@ -35,20 +27,12 @@
  ELE  -123.075679 pass
  
 >> ljpme NBFIX 
- VDW  58.5793917 pass
- ELE  -123.07568 pass
  
 >> ljpme_bycb NBFIX 
- VDW  58.5793917 pass
- ELE  -123.07568 pass
  
 >> ljpme_bycu NBFIX 
- VDW  58.5793917 pass
- ELE  -123.07568 pass
  
 >> ljpme_bygr NBFIX 
- VDW  58.5793917 pass
- ELE  -123.07568 pass
  
 >> switch NBFIX 
  VDW  58.5793917 pass
@@ -67,20 +51,12 @@
  ELE  -123.075679 pass
  
 >> ljpme NBTHOLE 
- VDW  2.15189824 pass
- ELE  NaN !!!!non-pass
  
 >> ljpme_bycb NBTHOLE 
- VDW  2.15189824 pass
- ELE  -123.07568 !!!!non-pass
  
 >> ljpme_bycu NBTHOLE 
- VDW  2.15189824 pass
- ELE  -123.07568 !!!!non-pass
  
 >> ljpme_bygr NBTHOLE 
- VDW  2.15189824 pass
- ELE  NaN !!!!non-pass
  
 >> switch NBTHOLE 
  VDW  2.15189824 pass
@@ -99,20 +75,12 @@
  ELE  NaN !!!!non-pass
  
 >> ljpme NBFIX_NBTHOLE 
- VDW  58.5793917 pass
- ELE  NaN !!!!non-pass
  
 >> ljpme_bycb NBFIX_NBTHOLE 
- VDW  58.5793917 pass
- ELE  -123.07568 !!!!non-pass
  
 >> ljpme_bycu NBFIX_NBTHOLE 
- VDW  58.5793917 pass
- ELE  -123.07568 !!!!non-pass
  
 >> ljpme_bygr NBFIX_NBTHOLE 
- VDW  58.5793917 pass
- ELE  NaN !!!!non-pass
  
 >> switch NBFIX_NBTHOLE 
  VDW  58.5793917 pass
@@ -235,20 +203,20 @@
 ###################################
   
 >> ljpme COMB 
- VDW  2.23185338 pass
- ELE  -123.07568 pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bycb COMB 
- VDW  2.23185338 pass
- ELE  -123.07568 pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bycu COMB 
- VDW  2.23185338 pass
- ELE  -123.07568 pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bygr COMB 
- VDW  2.23185338 pass
- ELE  -123.07568 pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
  
 >> switch COMB 
  VDW  2.15189824 pass
@@ -267,20 +235,20 @@
  ELE  -123.075679 pass
  
 >> ljpme NBFIX 
- VDW  58.6593468 pass
- ELE  -123.07568 pass
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bycb NBFIX 
- VDW  58.6593468 pass
- ELE  -123.07568 pass
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bycu NBFIX 
- VDW  58.6593468 pass
- ELE  -123.07568 pass
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bygr NBFIX 
- VDW  58.6593468 pass
- ELE  -123.07568 pass
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
  
 >> switch NBFIX 
  VDW  58.5793917 pass
@@ -299,20 +267,20 @@
  ELE  -123.075679 pass
  
 >> ljpme NBTHOLE 
- VDW  2.23185338 pass
- ELE  -106.775974 pass
+ VDW  2.15190963 pass
+ ELE  -106.776048 pass
  
 >> ljpme_bycb NBTHOLE 
- VDW  2.23185338 pass
- ELE  -123.07568 !!!!non-pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 !!!!non-pass
  
 >> ljpme_bycu NBTHOLE 
- VDW  2.23185338 pass
- ELE  -123.07568 !!!!non-pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 !!!!non-pass
  
 >> ljpme_bygr NBTHOLE 
- VDW  2.23185338 pass
- ELE  -106.775974 pass
+ VDW  2.15190963 pass
+ ELE  -106.776048 pass
  
 >> switch NBTHOLE 
  VDW  2.15189824 pass
@@ -331,20 +299,20 @@
  ELE  -106.775973 pass
  
 >> ljpme NBFIX_NBTHOLE 
- VDW  58.6593468 pass
- ELE  -106.775974 pass
+ VDW  58.579403 pass
+ ELE  -106.776048 pass
  
 >> ljpme_bycb NBFIX_NBTHOLE 
- VDW  58.6593468 pass
- ELE  -123.07568 !!!!non-pass
+ VDW  58.579403 pass
+ ELE  -123.075755 !!!!non-pass
  
 >> ljpme_bycu NBFIX_NBTHOLE 
- VDW  58.6593468 pass
- ELE  -123.07568 !!!!non-pass
+ VDW  58.579403 pass
+ ELE  -123.075755 !!!!non-pass
  
 >> ljpme_bygr NBFIX_NBTHOLE 
- VDW  58.6593468 pass
- ELE  -106.775974 pass
+ VDW  58.579403 pass
+ ELE  -106.776048 pass
  
 >> switch NBFIX_NBTHOLE 
  VDW  58.5793917 pass
@@ -567,20 +535,20 @@
 ###################################
   
 >> ljpme COMB 
- VDW  2.23185338 pass
- ELE  -123.07568 pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bycb COMB 
- VDW  2.23185338 pass
- ELE  -123.07568 pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bycu COMB 
- VDW  2.23185338 pass
- ELE  -123.07568 pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bygr COMB 
- VDW  2.23185338 pass
- ELE  -123.07568 pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
  
 >> switch COMB 
  VDW  2.15189824 pass
@@ -599,20 +567,20 @@
  ELE  -123.075679 pass
  
 >> ljpme NBFIX 
- VDW  58.6593468 pass
- ELE  -123.07568 pass
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bycb NBFIX 
- VDW  58.6593468 pass
- ELE  -123.07568 pass
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bycu NBFIX 
- VDW  58.6593468 pass
- ELE  -123.07568 pass
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
  
 >> ljpme_bygr NBFIX 
- VDW  58.6593468 pass
- ELE  -123.07568 pass
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
  
 >> switch NBFIX 
  VDW  58.5793917 pass
@@ -631,20 +599,20 @@
  ELE  -123.075679 pass
  
 >> ljpme NBTHOLE 
- VDW  2.23185338 pass
- ELE  -106.775974 pass
+ VDW  2.15190963 pass
+ ELE  -106.776048 pass
  
 >> ljpme_bycb NBTHOLE 
- VDW  2.23185338 pass
- ELE  -123.07568 !!!!non-pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 !!!!non-pass
  
 >> ljpme_bycu NBTHOLE 
- VDW  2.23185338 pass
- ELE  -123.07568 !!!!non-pass
+ VDW  2.15190963 pass
+ ELE  -123.075755 !!!!non-pass
  
 >> ljpme_bygr NBTHOLE 
- VDW  2.23185338 pass
- ELE  -106.775974 pass
+ VDW  2.15190963 pass
+ ELE  -106.776048 pass
  
 >> switch NBTHOLE 
  VDW  2.15189824 pass
@@ -663,20 +631,20 @@
  ELE  -106.775973 pass
  
 >> ljpme NBFIX_NBTHOLE 
- VDW  58.6593468 pass
- ELE  -106.775974 pass
+ VDW  58.579403 pass
+ ELE  -106.776048 pass
  
 >> ljpme_bycb NBFIX_NBTHOLE 
- VDW  58.6593468 pass
- ELE  -123.07568 !!!!non-pass
+ VDW  58.579403 pass
+ ELE  -123.075755 !!!!non-pass
  
 >> ljpme_bycu NBFIX_NBTHOLE 
- VDW  58.6593468 pass
- ELE  -123.07568 !!!!non-pass
+ VDW  58.579403 pass
+ ELE  -123.075755 !!!!non-pass
  
 >> ljpme_bygr NBFIX_NBTHOLE 
- VDW  58.6593468 pass
- ELE  -106.775974 pass
+ VDW  58.579403 pass
+ ELE  -106.776048 pass
  
 >> switch NBFIX_NBTHOLE 
  VDW  58.5793917 pass
@@ -693,4 +661,136 @@
 >> switch_bygr NBFIX_NBTHOLE 
  VDW  58.5793917 pass
  ELE  -106.775973 pass
+ 
+###################################
+# CHARMM Version charmm-c49b1-serial-ljpme-avx2-no_expand
+###################################
+  
+>> ljpme COMB 
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
+ 
+>> ljpme_bycb COMB 
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
+ 
+>> ljpme_bycu COMB 
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
+ 
+>> ljpme_bygr COMB 
+ VDW  2.15190963 pass
+ ELE  -123.075755 pass
+ 
+>> switch COMB 
+ VDW  0 !!!!non-pass
+ ELE  -405.078473 !!!!non-pass
+ 
+>> switch_bycb COMB 
+ VDW  0 !!!!non-pass
+ ELE  -405.087135 !!!!non-pass
+ 
+>> switch_bycu COMB 
+ VDW  0 !!!!non-pass
+ ELE  -95.7828698 !!!!non-pass
+ 
+>> switch_bygr COMB 
+ VDW  0 !!!!non-pass
+ ELE  -405.08592 !!!!non-pass
+ 
+>> ljpme NBFIX 
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
+ 
+>> ljpme_bycb NBFIX 
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
+ 
+>> ljpme_bycu NBFIX 
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
+ 
+>> ljpme_bygr NBFIX 
+ VDW  58.579403 pass
+ ELE  -123.075755 pass
+ 
+>> switch NBFIX 
+ VDW  0 !!!!non-pass
+ ELE  -405.075104 !!!!non-pass
+ 
+>> switch_bycb NBFIX 
+ VDW  0 !!!!non-pass
+ ELE  -405.076598 !!!!non-pass
+ 
+>> switch_bycu NBFIX 
+ VDW  0 !!!!non-pass
+ ELE  -95.7828698 !!!!non-pass
+ 
+>> switch_bygr NBFIX 
+ VDW  0 !!!!non-pass
+ ELE  -405.075895 !!!!non-pass
+ 
+>> ljpme NBTHOLE 
+ VDW  2.15190963 pass
+ ELE  -106.776048 pass
+ 
+>> ljpme_bycb NBTHOLE 
+ VDW  2.15190963 pass
+ ELE  -123.075755 !!!!non-pass
+ 
+>> ljpme_bycu NBTHOLE 
+ VDW  2.15190963 pass
+ ELE  -123.075755 !!!!non-pass
+ 
+>> ljpme_bygr NBTHOLE 
+ VDW  2.15190963 pass
+ ELE  -106.776048 pass
+ 
+>> switch NBTHOLE 
+ VDW  0 !!!!non-pass
+ ELE  -79.4831635 !!!!non-pass
+ 
+>> switch_bycb NBTHOLE 
+ VDW  0 !!!!non-pass
+ ELE  -405.086201 !!!!non-pass
+ 
+>> switch_bycu NBTHOLE 
+ VDW  0 !!!!non-pass
+ ELE  -95.7828698 !!!!non-pass
+ 
+>> switch_bygr NBTHOLE 
+ VDW  0 !!!!non-pass
+ ELE  -79.4831635 !!!!non-pass
+ 
+>> ljpme NBFIX_NBTHOLE 
+ VDW  58.579403 pass
+ ELE  -106.776048 pass
+ 
+>> ljpme_bycb NBFIX_NBTHOLE 
+ VDW  58.579403 pass
+ ELE  -123.075755 !!!!non-pass
+ 
+>> ljpme_bycu NBFIX_NBTHOLE 
+ VDW  58.579403 pass
+ ELE  -123.075755 !!!!non-pass
+ 
+>> ljpme_bygr NBFIX_NBTHOLE 
+ VDW  58.579403 pass
+ ELE  -106.776048 pass
+ 
+>> switch NBFIX_NBTHOLE 
+ VDW  0 !!!!non-pass
+ ELE  -79.4831635 !!!!non-pass
+ 
+>> switch_bycb NBFIX_NBTHOLE 
+ VDW  0 !!!!non-pass
+ ELE  -405.07725 !!!!non-pass
+ 
+>> switch_bycu NBFIX_NBTHOLE 
+ VDW  0 !!!!non-pass
+ ELE  -95.7828698 !!!!non-pass
+ 
+>> switch_bygr NBFIX_NBTHOLE 
+ VDW  0 !!!!non-pass
+ ELE  -79.4831635 !!!!non-pass
  

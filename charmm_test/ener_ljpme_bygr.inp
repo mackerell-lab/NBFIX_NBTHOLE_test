@@ -31,15 +31,15 @@ set resi CLA
 
 fast off ! for ljpme
 
-set fftx = 360
-set ffty = 360
-set fftz = 360
+set fftx = 240
+set ffty = 240
+set fftz = 240
 
 set dk = 0.4
-nbonds atom vatom vswitch bygr -
-       ctonnb 9.0 ctofnb 8.0 cutnb 13.5 cutim 13.5 -
+nbonds atom vatom  bygr -
+       ctonnb 9.0 ctofnb 9.0 cutnb 13.5 cutim 13.5 -
        inbfrq -1 imgfrq -1 wmin 1.0 cdie eps 1.0 -
-       ewald pmew fftx @fftx ffty @ffty fftz @fftz  kappa .34 spline order 6 -
+       ewald pmew fftx @fftx ffty @ffty fftz @fftz  kappa 0.34 spline order 6 -
        dpme dkappa @dk dftx @fftx dfty @fftx dftz @fftx dorder 6
 energy
 
@@ -50,12 +50,15 @@ set urey     ?UREY
 set improper ?IMPR
 set cmap     ?CMAP
 set vdw      ?VDW
+set ljre     ?LJRE
+set ljse     ?LJSE
 set elec     ?ELEC
 set ewks     ?EWKS
 set ewex     ?EWEX
 set ewse     ?EWSE
 
-calc ele = @ewks + @ewex + @ewse + @elec
+calc ele  = @ewks + @ewex + @ewse + @elec
+calc vdwc = @vdw + @ljre + @ljse 
 set tote   ?ENER
 
 open write unit 99 card name ./Output_CHARMM_ljpme_bygr.out
@@ -71,7 +74,7 @@ write title unit 99
 * UREY @urey
 * IMPR @improper
 * CMAP @cmap
-* VDW  @vdw
+* VDW  @vdwc
 * ELE  @ele
 * DRUD :reflects in bonded interaction in charmm
 * OTH1 

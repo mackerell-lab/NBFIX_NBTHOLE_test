@@ -1,11 +1,11 @@
 1
                  Chemistry at HARvard Macromolecular Mechanics
-           (CHARMM) - Developmental Version 50a1     August 15, 2024            
-                                Revision unknown                                
+           (CHARMM) - Developmental Version 49b1     August 15, 2024            
+                            Git commit ID 9bf8e4ac9                             
        Copyright(c) 1984-2023  President and Fellows of Harvard College
                               All Rights Reserved
          Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
-                 Created on 11/5/24 at 17:01:21 by user: ynan        
+                 Created on 11/14/24 at 21:00:16 by user: ynan        
 
             Maximum number of ATOMS:    360720, and RESidues:      120240
  RDTITL> * ION INTERACTION ENERGY SURFACE
@@ -257,12 +257,10 @@ Using Image CUBE search
 Splitting recip cores into (y by z):   1 by    1
 ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
 ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
-ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
 ENER EWALD:          EWKSum       EWSElf       EWEXcl       EWQCor       EWUTil
  ----------       ---------    ---------    ---------    ---------    ---------
-ENER>        0    -64.05779      0.00000    116.16505
+ENER>        0    -95.34438      0.00000     65.55833
 ENER INTERN>        0.43850      0.00000      0.00000      0.00000      0.00000
-ENER EXTERN>       58.57939    -27.29281      0.00000      0.00000      0.00000
 ENER EWALD>        24.15139  -1277.63727   1157.70301      0.00000      0.00000
  ----------       ---------    ---------    ---------    ---------    ---------
   
@@ -291,12 +289,12 @@ ENER EWALD>        24.15139  -1277.63727   1157.70301      0.00000      0.00000
  Parameter: CMAP <- "0"
   
  CHARMM>    set vdw      ?VDW
- RDCMND substituted energy or value "?VDW" to "58.5793917"
- Parameter: VDW <- "58.5793917"
+ RDCMND substituted energy or value "?VDW" to "0"
+ Parameter: VDW <- "0"
   
  CHARMM>    set elec     ?ELEC
- RDCMND substituted energy or value "?ELEC" to "-27.292809"
- Parameter: ELEC <- "-27.292809"
+ RDCMND substituted energy or value "?ELEC" to "-2.294380476-307"
+ Parameter: ELEC <- "-2.294380476-307"
   
  CHARMM>    set ewks     ?EWKS
  RDCMND substituted energy or value "?EWKS" to "24.1513902"
@@ -316,13 +314,13 @@ ENER EWALD>        24.15139  -1277.63727   1157.70301      0.00000      0.00000
  Parameter: EWKS -> "24.1513902"
  Parameter: EWEX -> "1157.70301"
  Parameter: EWSE -> "-1277.63727"
- Parameter: ELEC -> "-27.292809"
-Evaluating: 24.1513902+1157.70301+-1277.63727+-27.292809
- Parameter: ELE <- "-123.075679"
+ Parameter: ELEC -> "-2.294380476-307"
+Evaluating: 24.1513902+1157.70301+-1277.63727+-2.294380476-307
+ Parameter: ELE <- "-405.07725"
   
  CHARMM>    set tote   ?ENER
- RDCMND substituted energy or value "?ENER" to "-64.0577936"
- Parameter: TOTE <- "-64.0577936"
+ RDCMND substituted energy or value "?ENER" to "-95.3443762"
+ Parameter: TOTE <- "-95.3443762"
   
  CHARMM>     
   
@@ -335,7 +333,7 @@ Evaluating: 24.1513902+1157.70301+-1277.63727+-27.292809
  CHARMM>    write title unit 99
  RDTITL> * PRINTING ENERGY COMPONENTS FOR NA-CL SYSTEM SWITCH_PME
  RDTITL> * DISTANCE (A),  TOTAL ENERGY (KCAL/MOL)
- RDTITL> * 2.8  -64.0577936
+ RDTITL> * 2.8  -95.3443762
  RDTITL> * I
  RDTITL> * BOND 0.4385
  RDTITL> * ANGL 0
@@ -343,11 +341,11 @@ Evaluating: 24.1513902+1157.70301+-1277.63727+-27.292809
  RDTITL> * UREY 0
  RDTITL> * IMPR 0
  RDTITL> * CMAP 0
- RDTITL> * VDW  58.5793917
- RDTITL> * ELE  -123.075679
+ RDTITL> * VDW  0
+ RDTITL> * ELE  -405.07725
  RDTITL> * DRUD :REFLECTS IN BONDED INTERACTION IN CHARMM
  RDTITL> * OTH1
- RDTITL> * TOTE -64.0577936
+ RDTITL> * TOTE -95.3443762
  RDTITL> *
   
  CHARMM>     
@@ -359,25 +357,25 @@ $$$$$$  New timer profile $$$$$
       xdistm Build list               0.00 Other:            0.00
    List time                       0.01 Other:            0.01
             Direct Ewald time               0.00 Other:            0.00
-               Fill charge grid                0.13 Other:            0.00
+               Fill charge grid                0.11 Other:            0.00
                Scalar sum                      0.37 Other:            0.00
-               Grad sum                        0.01 Other:            0.00
-                  FFTcomm                         0.43 Other:            0.00
-               FFT                             1.79 Other:            1.36
-            Recip Ewald time                2.32 Other:            0.04
-         Ewald time                      2.32 Other:            0.00
-      Nonbond force                   2.32 Other:            0.00
+               Grad sum                        0.00 Other:            0.00
+                  FFTcomm                         0.36 Other:            0.00
+               FFT                             1.61 Other:            1.25
+            Recip Ewald time                2.12 Other:            0.04
+         Ewald time                      2.12 Other:            0.00
+      Nonbond force                   2.12 Other:            0.00
          Bond energy                     0.00 Other:            0.00
          Angle energy                    0.00 Other:            0.00
          Dihedral energy                 0.00 Other:            0.00
          Restraints energy               0.00 Other:            0.00
       INTRNL energy                   0.00 Other:            0.00
-   Energy time                     2.32 Other:            0.00
- Total time                      2.47 Other:            0.13
+   Energy time                     2.12 Other:            0.00
+ Total time                      2.25 Other:            0.12
 
                     NORMAL TERMINATION BY NORMAL STOP
                     NO WARNINGS WERE ISSUED
 
                     $$$$$ JOB ACCOUNTING INFORMATION $$$$$
-                     ELAPSED TIME:     2.47  SECONDS 
-                         CPU TIME:     2.46  SECONDS 
+                     ELAPSED TIME:     2.26  SECONDS 
+                         CPU TIME:     2.25  SECONDS 
