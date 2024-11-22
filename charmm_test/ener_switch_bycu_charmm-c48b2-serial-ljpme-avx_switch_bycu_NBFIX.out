@@ -1,0 +1,382 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+           (CHARMM) - Developmental Version 48b2   February 15, 2024            
+                            Git commit ID 0bbe2e2f5                             
+       Copyright(c) 1984-2023  President and Fellows of Harvard College
+                              All Rights Reserved
+         Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
+                 Created on 11/21/24 at 21:47:47 by user: ynan        
+
+            Maximum number of ATOMS:    360720, and RESidues:      120240
+ RDTITL> * ION INTERACTION ENERGY SURFACE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    iofo exte
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    stream ../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
+ VOPEN> Attempting to open::../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * DRUDE TOPOLOGY AND PARAMETER STREAM FILE
+ RDTITL> * TEMPLATE FOR WATER
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>     
+  
+ CHARMM>    read rtf card !append
+ MAINIO> Residue topology file being read from unit  99.
+ RDTITL> * TOPOLOGY FOR DRUDE WATER, IONS AND PROTEINS
+ RDTITL> *
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    read para card !append
+
+          PARAMETER FILE BEING READ FROM UNIT 99
+ RDTITL> * DRUDE POLARIZABLE FF PARAMETERS
+ RDTITL> *
+
+ PARRDR> WARNING: ATOMS IN BOND X        DRUD      500.00000   0.00000 DONT EXIST
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>    set ion  SOD
+ Parameter: ION <- "SOD"
+  
+ CHARMM>    set resi CLA
+ Parameter: RESI <- "CLA"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>        set xnew = 2.8
+ Parameter: XNEW <- "2.8"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>        open read unit 10 card name ./sod_cla_drude.psf
+ VOPEN> Attempting to open::./sod_cla_drude.psf::
+ OPNLGU> Unit 10 opened for READONLY access to ./sod_cla_drude.psf
+  
+ CHARMM>        read psf unit 10 card
+ MAINIO> Protein structure file being read from unit  10.
+ psf_read_formatted: Reading PSF in the expanded format.
+ TITLE>  * 5.9 -56.8665638
+ TITLE>  *  DATE:    10/24/24     14:48:52      CREATED BY USER: ynan
+ TITLE>  *
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        4   Number of groups     =        2
+         Number of bonds         =        2   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0   Number of autogens   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        2   Number of zero-bonds =        0
+         Number of aniso. terms  =        0   Number of lone-pairs =        0
+  
+ CHARMM>     
+  
+ CHARMM>        open read unit 10 card name ../coords/@ion_@resi_@xnew_min.pdb
+ Parameter: ION -> "SOD"
+ Parameter: RESI -> "CLA"
+ Parameter: XNEW -> "2.8"
+ OPNLGU> Unit already open. The old file will be closed first.
+ VCLOSE: Closing unit   10 with status "KEEP"
+ VOPEN> Attempting to open::../coords/sod_cla_2.8_min.pdb::
+ OPNLGU> Unit 10 opened for READONLY access to ../coords/sod_cla_2.8_min.pdb
+  
+ CHARMM>        read coor unit 10 pdb resid
+  read CHARMM-pdb format
+          SPATIAL COORDINATES BEING READ FROM UNIT 10
+ TITLE>   2.7 -68.2249364
+ TITLE>    DATE:    10/24/24     14:52:30      CREATED BY USER: YNAN
+ TITLE>  *
+  
+ CHARMM>        close unit 10
+ VCLOSE: Closing unit   10 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>        !stop
+  
+ CHARMM>     
+  
+ CHARMM>        set x 200.
+ Parameter: X <- "200."
+  
+ CHARMM>        set y @x
+ Parameter: X -> "200."
+ Parameter: Y <- "200."
+  
+ CHARMM>        set z @x
+ Parameter: X -> "200."
+ Parameter: Z <- "200."
+  
+ CHARMM>        crystal define cubic @x @y @z 90. 90. 90.
+ Parameter: X -> "200."
+ Parameter: Y -> "200."
+ Parameter: Z -> "200."
+ Crystal Parameters : Crystal Type = CUBI
+           A     =  200.00000 B    =  200.00000 C     =  200.00000
+           Alpha =   90.00000 Beta =   90.00000 Gamma =   90.00000
+  
+ CHARMM>        crystal build cutoff 10. noper 0
+ XBUILD> Building all transformations with a minimum atom-atom
+         contact distance of less than   10.00 Angstroms.
+
+ Range of Grid Search for Transformation     1 :
+ Lattice Vector A    -1 TO     1
+ Lattice Vector B    -1 TO     1
+ Lattice Vector C    -1 TO     1
+
+
+ The number of transformations generated =     0
+
+
+ Number  Symop   A   B   C   Distance
+
+                     THERE ARE NO ROTATIONS FOR THIS TRANSFORMATION SET
+     0 Transformations have been processed.
+
+  
+ CHARMM>     
+  
+ CHARMM>    set fftx = 240
+ Parameter: FFTX <- "240"
+  
+ CHARMM>    set ffty = 240
+ Parameter: FFTY <- "240"
+  
+ CHARMM>    set fftz = 240
+ Parameter: FFTZ <- "240"
+  
+ CHARMM>     
+  
+ CHARMM>    nbonds atom vatom switch vswitch bycu -
+ CHARMM>        cutnb 14.0 cutim 14.0 ctonnb 10.0 ctofnb 12.0 -
+ CHARMM>        ewald pmewald kappa 0.32 fftx @fftx ffty @ffty fftz @fftz order 6
+ Parameter: FFTX -> "240"
+ Parameter: FFTY -> "240"
+ Parameter: FFTZ -> "240"
+ <PME> Total heap storage needed =    28289011
+ Fill Ewald table: Number of points=     10000 EWXmax=    4.000000
+ fill erfc table: linear inter has rms error = 0.894102D-08 maximum error = 0.193763D-07
+ fill erfc table: cubic spline has rms error = 0.310057D-11 maximum error = 0.904055D-11
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYCUbe   NOEXtnd  EWALd   
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ PME EWALD OPTIONS: KAPPA  =  0.320  QCOR =  0.000  Bspline order = 6
+ FFTX= 240  FFTY= 240  FFTZ= 240
+                Using Pub FFT
+                Real-to-Complex FFT
+ There are        0 atom  pairs and        0 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ <MAKINB> with mode   5 found      2 exclusions and      0 interactions(1-4)
+ <MAKGRP> found      0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       33 ATOM PAIRS AND        0 GROUP PAIRS
+Using CUBE search
+ NBONDG Building particle interaction list using grid
+ Number of particles            =           4
+ Number of cells in X dimension =           1
+ Number of cells in Y dimension =           1
+ Number of cells in Z dimension =           1
+ Number of cells, total         =           1
+ Cell size                      =   14.000000000000000     
+  NBNDGC found:
+           4  atom pairs
+ **** Warning ****  The following extraneous characters
+ were found while command processing in CHARMM
+ CUTIM 14.0
+  
+ CHARMM>     
+  
+ CHARMM>    energy
+
+ NONBOND OPTION FLAGS: 
+     ELEC     VDW      ATOMs    CDIElec  SWITch   VATOm    VSWItch 
+     BYCUbe   NOEXtnd  EWALd   
+ CUTNB  = 14.000 CTEXNB =999.000 CTONNB = 10.000 CTOFNB = 12.000
+ CGONNB =  0.000 CGOFNB = 10.000
+ WMIN   =  1.500 WRNMXD =  0.500 E14FAC =  1.000 EPS    =  1.000
+ NBXMOD =      5
+ PME EWALD OPTIONS: KAPPA  =  0.320  QCOR =  0.000  Bspline order = 6
+ FFTX= 240  FFTY= 240  FFTZ= 240
+                Using Pub FFT
+                Real-to-Complex FFT
+ There are        4 atom  pairs and        2 atom  exclusions.
+ There are        0 group pairs and        0 group exclusions.
+ Generating nonbond list with Exclusion mode = 5
+ == PRIMARY == SPACE FOR       33 ATOM PAIRS AND        0 GROUP PAIRS
+Using CUBE search
+ NBONDG Building particle interaction list using grid
+ Number of particles            =           4
+ Number of cells in X dimension =           1
+ Number of cells in Y dimension =           1
+ Number of cells in Z dimension =           1
+ Number of cells, total         =           1
+ Cell size                      =   14.000000000000000     
+  NBNDGC found:
+           4  atom pairs
+ENER ENR:  Eval#     ENERgy      Delta-E         GRMS
+ENER INTERN:          BONDs       ANGLes       UREY-b    DIHEdrals    IMPRopers
+ENER EXTERN:        VDWaals         ELEC       HBONds          ASP         USER
+ENER EWALD:          EWKSum       EWSElf       EWEXcl       EWQCor       EWUTil
+ ----------       ---------    ---------    ---------    ---------    ---------
+ENER>        0    -64.05784      0.00000    116.16472
+ENER INTERN>        0.43850      0.00000      0.00000      0.00000      0.00000
+ENER EXTERN>       58.57939    -27.29281      0.00000      0.00000      0.00000
+ENER EWALD>        24.15134  -1277.63727   1157.70301      0.00000      0.00000
+ ----------       ---------    ---------    ---------    ---------    ---------
+  
+ CHARMM>    set bonds    ?BOND
+ RDCMND substituted energy or value "?BOND" to "0.4385"
+ Parameter: BONDS <- "0.4385"
+  
+ CHARMM>    set angle    ?ANGL
+ RDCMND substituted energy or value "?ANGL" to "0"
+ Parameter: ANGLE <- "0"
+  
+ CHARMM>    set dihedral ?DIHE
+ RDCMND substituted energy or value "?DIHE" to "0"
+ Parameter: DIHEDRAL <- "0"
+  
+ CHARMM>    set urey     ?UREY
+ RDCMND substituted energy or value "?UREY" to "0"
+ Parameter: UREY <- "0"
+  
+ CHARMM>    set improper ?IMPR
+ RDCMND substituted energy or value "?IMPR" to "0"
+ Parameter: IMPROPER <- "0"
+  
+ CHARMM>    set cmap     ?CMAP
+ RDCMND substituted energy or value "?CMAP" to "0"
+ Parameter: CMAP <- "0"
+  
+ CHARMM>    set vdw      ?VDW
+ RDCMND substituted energy or value "?VDW" to "58.5793917"
+ Parameter: VDW <- "58.5793917"
+  
+ CHARMM>    set elec     ?ELEC
+ RDCMND substituted energy or value "?ELEC" to "-27.292809"
+ Parameter: ELEC <- "-27.292809"
+  
+ CHARMM>    set ewks     ?EWKS
+ RDCMND substituted energy or value "?EWKS" to "24.151339"
+ Parameter: EWKS <- "24.151339"
+  
+ CHARMM>    set ewex     ?EWEX
+ RDCMND substituted energy or value "?EWEX" to "1157.70301"
+ Parameter: EWEX <- "1157.70301"
+  
+ CHARMM>    set ewse     ?EWSE
+ RDCMND substituted energy or value "?EWSE" to "-1277.63727"
+ Parameter: EWSE <- "-1277.63727"
+  
+ CHARMM>     
+  
+ CHARMM>    calc ele = @ewks + @ewex + @ewse + @elec
+ Parameter: EWKS -> "24.151339"
+ Parameter: EWEX -> "1157.70301"
+ Parameter: EWSE -> "-1277.63727"
+ Parameter: ELEC -> "-27.292809"
+Evaluating: 24.151339+1157.70301+-1277.63727+-27.292809
+ Parameter: ELE <- "-123.07573"
+  
+ CHARMM>    set tote   ?ENER
+ RDCMND substituted energy or value "?ENER" to "-64.0578447"
+ Parameter: TOTE <- "-64.0578447"
+  
+ CHARMM>     
+  
+ CHARMM>    open write unit 99 card name ./Output_CHARMM_switch_bycu.out
+ VOPEN> Attempting to open::./output_charmm_switch_bycu.out::
+ OPNLGU> Unit 99 opened for WRITE access to ./output_charmm_switch_bycu.out
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 99
+ RDTITL> * PRINTING ENERGY COMPONENTS FOR NA-CL SYSTEM SWITCH_PME
+ RDTITL> * DISTANCE (A),  TOTAL ENERGY (KCAL/MOL)
+ RDTITL> * 2.8  -64.0578447
+ RDTITL> * I
+ RDTITL> * BOND 0.4385
+ RDTITL> * ANGL 0
+ RDTITL> * DIHE 0
+ RDTITL> * UREY 0
+ RDTITL> * IMPR 0
+ RDTITL> * CMAP 0
+ RDTITL> * VDW  58.5793917
+ RDTITL> * ELE  -123.07573
+ RDTITL> * DRUD :REFLECTS IN BONDED INTERACTION IN CHARMM
+ RDTITL> * OTH1
+ RDTITL> * TOTE -64.0578447
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    stop
+ VCLOSE: Closing unit   99 with status "KEEP"
+$$$$$$  New timer profile $$$$$
+   List time                       0.00 Other:            0.00
+            Direct Ewald time               0.00 Other:            0.00
+               Fill charge grid                0.03 Other:            0.00
+               Scalar sum                      0.49 Other:            0.00
+               Grad sum                        0.00 Other:            0.00
+               FFT                             0.48 Other:            0.00
+            Recip Ewald time                1.02 Other:            0.01
+         Ewald time                      1.02 Other:            0.00
+      Nonbond force                   1.02 Other:            0.00
+         Bond energy                     0.00 Other:            0.00
+         Angle energy                    0.00 Other:            0.00
+         Dihedral energy                 0.00 Other:            0.00
+         Restraints energy               0.00 Other:            0.00
+      INTRNL energy                   0.00 Other:            0.00
+   Energy time                     1.02 Other:            0.00
+ Total time                      1.07 Other:            0.05
+
+                    NORMAL TERMINATION BY NORMAL STOP
+                    NO WARNINGS WERE ISSUED
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     1.07  SECONDS 
+                         CPU TIME:     1.07  SECONDS 

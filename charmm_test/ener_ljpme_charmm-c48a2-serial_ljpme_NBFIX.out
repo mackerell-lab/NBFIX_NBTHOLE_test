@@ -1,0 +1,254 @@
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+           (CHARMM) - Developmental Version 48a2       March 1, 2023            
+                                Revision unknown                                
+       Copyright(c) 1984-2020  President and Fellows of Harvard College
+                              All Rights Reserved
+         Current operating system: Linux-4.9.0-9-amd64(x86_64)@ocracoke         
+                 Created on 11/21/24 at 21:46:39 by user: ynan        
+
+            Maximum number of ATOMS:    360720, and RESidues:      120240
+ RDTITL> * ION INTERACTION ENERGY SURFACE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>    iofo exte
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>     
+  
+ CHARMM>    stream ../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
+ VOPEN> Attempting to open::../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str::
+ OPNLGU> Unit 99 opened for READONLY access to ../drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
+
+                    INPUT STREAM SWITCHING TO UNIT    99
+ RDTITL> * DRUDE TOPOLOGY AND PARAMETER STREAM FILE
+ RDTITL> * TEMPLATE FOR WATER
+ RDTITL> *
+ Parameter: IN1 <- "" <empty>
+  
+ CHARMM>     
+  
+ CHARMM>    ioformat extended
+ MISCOM> Expanded I/O format is used.
+  
+ CHARMM>     
+  
+ CHARMM>    read rtf card !append
+ MAINIO> Residue topology file being read from unit  99.
+ RDTITL> * TOPOLOGY FOR DRUDE WATER, IONS AND PROTEINS
+ RDTITL> *
+
+ DRUDES PARTICLES WILL BE GENERATED AUTOMATICALLY FOR ALL ATOMS WITH NON-ZERO ALPHA
+ Thole-type dipole screening, Slater-Delta shape {S(u) = 1 - (1+u/2)*exp(-u)}, default radius =  1.300000
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    read para card !append
+
+          PARAMETER FILE BEING READ FROM UNIT 99
+ RDTITL> * DRUDE POLARIZABLE FF PARAMETERS
+ RDTITL> *
+
+ PARRDR> WARNING: ATOMS IN BOND X        DRUD      500.00000   0.00000 DONT EXIST
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ VCLOSE: Closing unit   99 with status "KEEP"
+
+                    RETURNING TO INPUT STREAM     5
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    set ion  SOD
+ Parameter: ION <- "SOD"
+  
+ CHARMM>    set resi CLA
+ Parameter: RESI <- "CLA"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>        set xnew = 2.8
+ Parameter: XNEW <- "2.8"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>        open read unit 10 card name ./sod_cla_drude.psf
+ VOPEN> Attempting to open::./sod_cla_drude.psf::
+ OPNLGU> Unit 10 opened for READONLY access to ./sod_cla_drude.psf
+  
+ CHARMM>        read psf unit 10 card
+ MAINIO> Protein structure file being read from unit  10.
+ psf_read_formatted: Reading PSF in the expanded format.
+ TITLE>  * 5.9 -56.8665638
+ TITLE>  *  DATE:    10/24/24     14:48:52      CREATED BY USER: ynan
+ TITLE>  *
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        2   Number of residues   =        2
+         Number of atoms         =        4   Number of groups     =        2
+         Number of bonds         =        2   Number of angles     =        0
+         Number of dihedrals     =        0   Number of impropers  =        0
+         Number of cross-terms   =        0   Number of autogens   =        0
+         Number of HB acceptors  =        0   Number of HB donors  =        0
+         Number of NB exclusions =        0   Total charge =    0.00000
+         Number of Drudes        =        2
+         Number of true-bonds    =        2   Number of zero-bonds =        0
+         Number of aniso. terms  =        0   Number of lone-pairs =        0
+  
+ CHARMM>     
+  
+ CHARMM>        open read unit 10 card name ../coords/@ion_@resi_@xnew_min.pdb
+ Parameter: ION -> "SOD"
+ Parameter: RESI -> "CLA"
+ Parameter: XNEW -> "2.8"
+ OPNLGU> Unit already open. The old file will be closed first.
+ VCLOSE: Closing unit   10 with status "KEEP"
+ VOPEN> Attempting to open::../coords/sod_cla_2.8_min.pdb::
+ OPNLGU> Unit 10 opened for READONLY access to ../coords/sod_cla_2.8_min.pdb
+  
+ CHARMM>        read coor unit 10 pdb resid
+  read CHARMM-pdb format
+          SPATIAL COORDINATES BEING READ FROM UNIT 10
+ TITLE>   2.7 -68.2249364
+ TITLE>    DATE:    10/24/24     14:52:30      CREATED BY USER: YNAN
+ TITLE>  *
+  
+ CHARMM>        close unit 10
+ VCLOSE: Closing unit   10 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>        !stop
+  
+ CHARMM>     
+  
+ CHARMM>        set x 200.
+ Parameter: X <- "200."
+  
+ CHARMM>        set y @x
+ Parameter: X -> "200."
+ Parameter: Y <- "200."
+  
+ CHARMM>        set z @x
+ Parameter: X -> "200."
+ Parameter: Z <- "200."
+  
+ CHARMM>        crystal define cubic @x @y @z 90. 90. 90.
+ Parameter: X -> "200."
+ Parameter: Y -> "200."
+ Parameter: Z -> "200."
+ Crystal Parameters : Crystal Type = CUBI
+           A     =  200.00000 B    =  200.00000 C     =  200.00000
+           Alpha =   90.00000 Beta =   90.00000 Gamma =   90.00000
+  
+ CHARMM>        crystal build cutoff 10. noper 0
+ XBUILD> Building all transformations with a minimum atom-atom
+         contact distance of less than   10.00 Angstroms.
+
+ Range of Grid Search for Transformation     1 :
+ Lattice Vector A    -1 TO     1
+ Lattice Vector B    -1 TO     1
+ Lattice Vector C    -1 TO     1
+
+
+ The number of transformations generated =     0
+
+
+ Number  Symop   A   B   C   Distance
+
+                     THERE ARE NO ROTATIONS FOR THIS TRANSFORMATION SET
+     0 Transformations have been processed.
+
+  
+ CHARMM>     
+  
+ CHARMM>    fast off ! for ljpme
+ Hardwired Periodic Boundaries: 
+              Turned Off
+ MISCOM> FAST option: OFF (full feature routines)
+  
+ CHARMM>     
+  
+ CHARMM>    set fftx = 240
+ Parameter: FFTX <- "240"
+  
+ CHARMM>    set ffty = 240
+ Parameter: FFTY <- "240"
+  
+ CHARMM>    set fftz = 240
+ Parameter: FFTZ <- "240"
+  
+ CHARMM>     
+  
+ CHARMM>    set dk = 0.4
+ Parameter: DK <- "0.4"
+  
+ CHARMM>    nbonds atom vatom  -
+ CHARMM>           ctonnb 9.0 ctofnb 9.0 cutnb 13.5 cutim 13.5 -
+ CHARMM>           inbfrq -1 imgfrq -1 wmin 1.0 cdie eps 1.0 -
+ CHARMM>           ewald pmew fftx @fftx ffty @ffty fftz @fftz  kappa 0.34 spline order 6 -
+ CHARMM>           dpme dkappa @dk dftx @fftx dfty @fftx dftz @fftx dorder 6
+ Parameter: FFTX -> "240"
+ Parameter: FFTY -> "240"
+ Parameter: FFTZ -> "240"
+ Parameter: DK -> "0.4"
+ Parameter: FFTX -> "240"
+ Parameter: FFTX -> "240"
+ Parameter: FFTX -> "240"
+
+      ***** LEVEL -5 WARNING FROM <NBONDS> *****
+      ***** LJPME requested but this version has not been compiled with the LJPME option
+      ******************************************
+      BOMLEV (  0) IS REACHED - TERMINATING. WRNLEV IS  5
+
+
+                                                  
+                            /---------\           
+                           /           \          
+                          /             \         
+                         /               \        
+                         !  XXXX   XXXX  !        
+                         !  XXXX   XXXX  !        
+                         !  XXX     XXX  !        
+                         !       X       !        
+                          --\   XXX   /--         
+                           ! !  XXX  ! !          
+                           ! !       ! !          
+                           ! I I I I I !          
+                           !  I I I I  !          
+                            \         /           
+                             --     --            
+                               \---/              
+                        XXX             XXX       
+                       XXXX             XXXX      
+                       XXXXX           XXXXX      
+                          XXX         XXX         
+                            XXX     XXX           
+                               XXXXX              
+                              XXX XXX             
+                            XXX     XXX           
+                          XXX         XXX         
+                       XXXXX           XXXXX      
+                       XXXX             XXXX      
+                        XXX             XXX       
+                                                  
+                                                  
+ Execution terminated due to the detection of a fatal error.
+
+                    ABNORMAL TERMINATION
+                    MOST SEVERE WARNING WAS AT LEVEL -5
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.03  SECONDS 
+                         CPU TIME:     0.03  SECONDS 

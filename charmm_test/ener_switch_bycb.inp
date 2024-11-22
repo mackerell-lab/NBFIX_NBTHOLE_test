@@ -28,14 +28,15 @@ set resi CLA
     set y @x
     set z @x
     crystal define cubic @x @y @z 90. 90. 90.
-    crystal build cutoff 10. noper 0
+    crystal build cutoff 14. noper 0
+    !image byres xcen 0. ycen 0. zcen 0. sele all end
 
-set fftx = 360
-set ffty = 360
-set fftz = 360
+set fftx = 240
+set ffty = 240
+set fftz = 240
 
-nbonds atom vatom switch vswitch bycb -
-    cutnb 14.0 ctonnb 10.0 ctofnb 12.0 -
+nbonds atom vatom vswitch bycb -
+    cutnb 14.0 cutim 14.0 ctonnb 10.0 ctofnb 12.0 -
     ewald pmewald kappa 0.32 fftx @fftx ffty @ffty fftz @fftz order 6
 
 energy

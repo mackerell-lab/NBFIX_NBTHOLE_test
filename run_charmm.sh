@@ -22,8 +22,10 @@ CHARMMEXC2=charmm-c48a2-serial
 CHARMMEXC3=charmm-c48b2-serial-ljpme
 CHARMMEXC4=charmm-c48b2-serial-ljpme-avx
 CHARMMEXC5=charmm-c48b2-serial-ljpme-avx2
+CHARMMEXC6=charmm-c50a1-serial-ljpme
+CHARMMEXC7=charmm-c49b1-serial-ljpme-no_expand
 
-for CHARMM in $CHARMMEXC1 $CHARMMEXC2 $CHARMMEXC3 $CHARMMEXC4 $CHARMMEXC5
+for CHARMM in  $CHARMMEXC1  $CHARMMEXC2 $CHARMMEXC3 $CHARMMEXC4 $CHARMMEXC5 $CHARMMEXC6 $CHARMMEXC7
 do
 
 echo "###################################" >> Result_CHARMM.txt
@@ -66,18 +68,18 @@ case $FF in
 sed -i "s|$original1|$new_value1|g" ./drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
 sed -i "s|$original2|$new_value2|g" ./drude_toppar_nbfix_nbthole_test/toppar_drude_water_nacl.str
 
-for method in switch ljpme
+for method in  ljpme ljpme_bycb ljpme_bycu ljpme_bygr switch switch_bycb  switch_bycu switch_bygr  #ljpme_bycc switch_bycc
 do
 
 cd charmm_test
-rm output_*.out
+rm output_charmm_${method}.out
 
 /opt/mackerell/apps/charmm/serial/$CHARMM -i ener_${method}.inp -o ener_${method}.out
 #/opt/mackerell/apps/charmm/serial/c44b2-serial -i ener_${method}.inp -o ener_${method}_${FF}.out
 
 
-mv  ./output_charmm_$method.out ./output_charmm_${CHARMM}_${method}_${FF}.out
-
+mv  ./output_charmm_${method}.out   ./output_charmm_${CHARMM}_${method}_${FF}.out
+mv  ./ener_${method}.out            ./ener_${method}_${CHARMM}_${method}_${FF}.out
 
 echo "              "
 echo "Running ${CHARMM} ${method} ${FF} ..."
