@@ -2,7 +2,7 @@
 # CHARMM Version c44b2-serial
 ###################################
   
->> ljpme COMB 
+>> ljpme COMB (combination rule. No NBFIX or NBTHOLE)
  
 >> ljpme_bycb COMB 
  
